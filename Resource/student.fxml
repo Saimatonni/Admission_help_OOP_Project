@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1020.0" style="-fx-background-color: #744F88;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admission_help.studentController">
+    <children>
+        <VBox layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="80.0" style="-fx-background-color: #452153;">
+            <children>
+                <HBox alignment="CENTER" onMouseClicked="#dash" prefHeight="74.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                    <children>
+                        <ImageView fx:id="dashimageview" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" smooth="false">
+                            <image>
+                                <Image url="@../../../../../../images/Disk.png" />
+                            </image>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" onMouseClicked="#home" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                    <children>
+                        <ImageView fx:id="homeimageview" fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../images/Home.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="84.0" onMouseClicked="#student" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #744F88;">
+                    <children>
+                        <ImageView fx:id="studentimageview" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../images/Male.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="1.0" contrast="1.0" hue="0.21" saturation="1.0" />
+                            </effect>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="204.0" onMouseClicked="#university" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                    <children>
+                        <ImageView fx:id="universityimageview" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../images/university-icon-19.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="1.0" />
+                            </effect>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="264.0" onMouseClicked="#euniversity" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                    <children>
+                        <ImageView fx:id="euniversityimageview" fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../images/Search.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="1.0" contrast="1.0" />
+                            </effect>
+                        </ImageView>
+                    </children></HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="384.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                    <children>
+                        <ImageView fx:id="dstudentimageview" fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../images/Chat.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="1.0" />
+                            </effect>
+                        </ImageView>
+                    </children>
+                    <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" />
+                    </effect></HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="324.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                    <children>
+                        <ImageView fx:id="questionsimageview" fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../images/Read.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="1.0" />
+                            </effect>
+                        </ImageView>
+                    </children></HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="144.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;" />
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="444.0" prefHeight="95.0" prefWidth="80.0" style="-fx-background-color: #DD5043;">
+                    <children>
+                        <ImageView fx:id="logoutimageview" fitHeight="35.0" fitWidth="30.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../images/Circles.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="1.0" />
+                            </effect>
+                        </ImageView>
+                    </children>
+                    <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" />
+                    </effect>
+                </HBox>
+            </children>
+        </VBox>
+        <Label contentDisplay="CENTER" layoutX="906.0" layoutY="24.0" opacity="0.94" text="STUDENT" textAlignment="CENTER" textFill="#2d2d37">
+            <font>
+                <Font name="Leelawadee UI Bold" size="22.0" />
+            </font>
+            <effect>
+                <Glow />
+            </effect>
+        </Label>
+        <HBox alignment="CENTER_LEFT" layoutX="857.0" layoutY="61.0" onMouseClicked="#logout" prefHeight="33.0" prefWidth="149.0" style="-fx-background-color: #452153;">
+            <children>
+                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="80.0">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="80.0">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="46.0" prefWidth="71.0" style="-fx-background-color: #DD5043;">
+                                    <children>
+                                        <ImageView fx:id="logoutimageview2" fitHeight="32.0" fitWidth="25.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../../../../../../images/Circles.png" />
+                                            </image>
+                                            <effect>
+                                                <ColorAdjust brightness="1.0" />
+                                            </effect>
+                                        </ImageView>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </HBox>
+                <Label id="fd_logout" prefHeight="33.0" prefWidth="150.0" text="Logout" textFill="WHITE">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                    <padding>
+                        <Insets left="12.0" />
+                    </padding>
+                    <effect>
+                        <DropShadow blurType="GAUSSIAN" />
+                    </effect>
+                </Label>
+            </children>
+            <effect>
+                <DropShadow blurType="GAUSSIAN" />
+            </effect>
+        </HBox>
+      <Label layoutX="121.0" layoutY="23.0" prefHeight="35.0" prefWidth="208.0" text="ADD INFORMATION" textFill="#ebc4c4">
+         <font>
+            <Font name="Britannic Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="117.0" layoutY="69.0" prefHeight="5.0" prefWidth="120.0" text="Name" textFill="#f5f5f5">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="273.0" prefHeight="25.0" prefWidth="110.0" text="SSC GPA" textFill="#f5f5f5">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nametextfield" layoutX="116.0" layoutY="103.0" prefHeight="21.0" prefWidth="149.0">
+         <padding>
+            <Insets left="7.0" />
+         </padding></TextField>
+      <TextField fx:id="sscgpatextfield" layoutX="121.0" layoutY="307.0" prefHeight="3.0" prefWidth="157.0">
+         <padding>
+            <Insets left="7.0" />
+         </padding></TextField>
+      <Label layoutX="121.0" layoutY="133.0" prefHeight="25.0" prefWidth="89.0" text="SSC Group" textFill="#f5f5f5">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="121.0" layoutY="344.0" prefHeight="25.0" prefWidth="89.0" text="HSC GPA" textFill="#f5f5f5">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="sscgrouptextfield" layoutX="121.0" layoutY="165.0" prefHeight="21.0" prefWidth="149.0">
+         <padding>
+            <Insets left="7.0" />
+         </padding></TextField>
+      <TextField fx:id="hscgpatextfield" layoutX="121.0" layoutY="377.0" prefHeight="3.0" prefWidth="157.0">
+         <padding>
+            <Insets left="7.0" />
+         </padding></TextField>
+      <Label layoutX="121.0" layoutY="204.0" prefHeight="25.0" prefWidth="120.0" text="HSC Group" textFill="#f5f5f5">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="hscgrouptextfield" layoutX="121.0" layoutY="240.0" prefHeight="3.0" prefWidth="149.0">
+         <padding>
+            <Insets left="7.0" />
+         </padding></TextField>
+      <Label layoutX="117.0" layoutY="412.0" prefHeight="25.0" prefWidth="157.0" text="Division" textFill="#f5f5f5">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="divisiontextfield" layoutX="121.0" layoutY="448.0" prefHeight="3.0" prefWidth="157.0">
+         <padding>
+            <Insets left="7.0" />
+         </padding></TextField>
+      <Button layoutX="117.0" layoutY="504.0" mnemonicParsing="false" onAction="#addStudentonAction" prefHeight="39.0" prefWidth="157.0" style="-fx-background-color: #EE345F; -fx-border-color: #4567EF; -fx-border-radius: 5;" text="ADD">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="namelabel" layoutX="701.0" layoutY="173.0" prefHeight="51.0" prefWidth="289.0" textFill="#42e00d">
+         <font>
+            <Font name="Britannic Bold" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="profileimageview" fitHeight="113.0" fitWidth="126.0" layoutX="622.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../images/prof2.png" />
+         </image>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </ImageView>
+      <Label layoutX="495.0" layoutY="173.0" prefHeight="53.0" prefWidth="191.0" text="Name       :" textFill="#f51d1d">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="495.0" layoutY="235.0" prefHeight="53.0" prefWidth="191.0" text="SSC Group:" textFill="#f51d1d">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="sscgrouplabel" layoutX="701.0" layoutY="236.0" prefHeight="51.0" prefWidth="289.0" textFill="#42e00d">
+         <font>
+            <Font name="Britannic Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="488.0" layoutY="302.0" prefHeight="53.0" prefWidth="198.0" text="HSC Group:" textFill="#f52d1b">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="hscgrouplabel" layoutX="701.0" layoutY="303.0" prefHeight="51.0" prefWidth="289.0" textFill="#42e00d">
+         <font>
+            <Font name="Britannic Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="495.0" layoutY="372.0" prefHeight="53.0" prefWidth="191.0" text="SSC GPA   :" textFill="#f51b1b">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="sscgpalabel" layoutX="701.0" layoutY="373.0" prefHeight="51.0" prefWidth="289.0" textFill="#42e00d">
+         <font>
+            <Font name="Britannic Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="495.0" layoutY="443.0" prefHeight="53.0" prefWidth="191.0" text="HSC GPA  :" textFill="#f51b1b">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="hscgpalabel" layoutX="701.0" layoutY="444.0" prefHeight="51.0" prefWidth="289.0" textFill="#42e00d">
+         <font>
+            <Font name="Britannic Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="495.0" layoutY="514.0" prefHeight="53.0" prefWidth="191.0" text="Division    :" textFill="#f51b1b">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="divisionlabel" layoutX="701.0" layoutY="515.0" prefHeight="51.0" prefWidth="289.0" textFill="#42e00d">
+         <font>
+            <Font name="Britannic Bold" size="36.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
