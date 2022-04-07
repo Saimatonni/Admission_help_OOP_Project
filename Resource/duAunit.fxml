@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="580.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutX="495.0" layoutY="265.0" prefHeight="200.0" prefWidth="100.0" />
+      <HBox layoutX="-1.0" layoutY="14.0" prefHeight="42.0" prefWidth="1230.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="41.0" prefWidth="1229.0" text="DU 'A' Unit Departments" textAlignment="CENTER">
+               <font>
+                  <Font name="Baloo Bhai Regular" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox layoutX="90.0" layoutY="94.0" prefHeight="627.0" prefWidth="283.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Subject Name">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Separator prefWidth="200.0" />
+            <Text stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Physics">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="47.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Mathematics">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="64.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Chemistry">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="47.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Statistics">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="64.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Applied Mathematics">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="81.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Soil, Water and Environment Science">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="95.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Botany">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="111.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Zoology">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="127.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Psychology">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="149.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Microbiology">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="166.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Fisheries">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="183.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Genetic Engineering &amp; Biotechnology">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="200.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Pharmacy">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="217.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Geography and environment">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="234.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Geology">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="251.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Oceanography">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="268.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Disaster science and management">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="285.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Electrical and Electronic Engineering">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="302.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Applied Chemistry and Chemistry">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="319.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Computer Science and Engineering">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="336.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Nuclear engineering">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="148.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Robotics and Mechanics Engineering">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="165.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Applied statistics">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="182.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Nutrition and Food Science">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="199.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Software engineering">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="216.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Leather engineering">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="386.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Footwear engineering">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="399.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Leather Products Engineering">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="416.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Physical Sciences">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+            <Text layoutX="10.0" layoutY="433.0" stroke="#fcf6f6" strokeType="OUTSIDE" strokeWidth="0.0" text="Biological Science">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </Text>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

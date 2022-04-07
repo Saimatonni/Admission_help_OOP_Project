@@ -1,0 +1,23 @@
+.back_button{
+    --fxbackground-color: #372F5B;
+}
+
+.back_button:hover{
+    -fx-cursor: hand ;
+}
+
+.buttons{
+    --fxbackground-color: #0EE8DB;
+}
+
+.buttons:hover{
+    -fx-cursor : hand;
+    -fx-background-color: #372F5B;
+    -fx-border-color: white;
+    -fx-border-width: 0px 0px 0px 0px 3px;
+    /*--fxbackground-color: #372F5B;*/
+    /*box-shadow: none;*/
+    /*color: offwhite;*/
+    /*-fx-border-width: 0, 4px, 8px, 12px;*/
+
+}

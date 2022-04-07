@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1020.0" style="-fx-background-color: #744F88;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admission_help.eligibilityController">
+    <children>
+        <ImageView fx:id="bannerimageview" fitWidth="600.0" layoutX="202.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../../../../../images/List.png" />
+            </image>
+            <effect>
+                <DropShadow />
+            </effect>
+        </ImageView>
+        <VBox layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="80.0" style="-fx-background-color: #452153;">
+            <children>
+                <HBox alignment="CENTER" onMouseClicked="#dash" prefHeight="74.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                    <children>
+                        <ImageView fx:id="dashimageview" fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" smooth="false">
+                            <image>
+                                <Image url="@../../../../../../images/Disk.png" />
+                            </image>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" onMouseClicked="#home" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                    <children>
+                        <ImageView fx:id="homeimageview" fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../images/Home.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                    <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" />
+                    </effect>
+                </HBox>
+                <HBox alignment="CENTER" onMouseClicked="#student" layoutX="10.0" layoutY="84.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                    <children>
+                        <ImageView fx:id="studentimageview" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../images/Male.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="1.0" contrast="1.0" hue="0.21" saturation="1.0" />
+                            </effect>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" onMouseClicked="#university" layoutX="10.0" layoutY="204.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                    <children>
+                        <ImageView fx:id="universityimageview" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../images/university-icon-19.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="1.0" />
+                            </effect>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" onMouseClicked="#euniversity" layoutX="10.0" layoutY="264.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #744F88;">
+                    <children>
+                        <ImageView fx:id="euniversityimageview" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../images/Search.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="1.0" />
+                            </effect>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="384.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                    <children>
+                        <ImageView fx:id="dstudentimageview" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../images/Chat.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="1.0" />
+                            </effect>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="324.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                    <children>
+                        <ImageView fx:id="questionsimageview" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../images/Read.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="1.0" />
+                            </effect>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="144.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;" />
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="444.0" prefHeight="95.0" prefWidth="80.0" style="-fx-background-color: #DD5043;">
+                    <children>
+                        <ImageView fx:id="logoutimageview" fitHeight="35.0" fitWidth="30.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../images/Circles.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="1.0" />
+                            </effect>
+                        </ImageView>
+                    </children>
+                    <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" />
+                    </effect>
+                </HBox>
+            </children>
+        </VBox>
+        <Label contentDisplay="CENTER" layoutX="401.0" opacity="0.94" prefHeight="54.0" prefWidth="251.0" text="    Eligibility" textAlignment="CENTER" textFill="#2d2d37">
+            <font>
+                <Font name="Leelawadee UI Bold" size="36.0" />
+            </font>
+            <effect>
+                <Glow />
+            </effect>
+        </Label>
+        <TextField layoutX="202.0" layoutY="348.0" prefHeight="26.0" prefWidth="600.0" text="Enter Your Result And Steam ( HSC_GPA,HSC_Steam,SSC_GPA,SSC_Steam):" />
+        <TextField fx:id="myinputtext" layoutX="202.0" layoutY="379.0" prefHeight="26.0" prefWidth="472.0" />
+        <Button fx:id="myButton" defaultButton="true" layoutX="687.0" layoutY="379.0" mnemonicParsing="false" onAction="#submit" prefHeight="26.0" prefWidth="114.0" text="Submit" textFill="#45747d" />
+        <Label text="Label" />
+        <Label fx:id="outputtext" layoutX="203.0" layoutY="417.0" prefHeight="158.0" prefWidth="600.0" textFill="#fffdfd">
+            <font>
+                <Font name="System Bold" size="15.0" />
+            </font></Label>
+
+    </children>
+</AnchorPane>

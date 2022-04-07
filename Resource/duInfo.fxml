@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="688.0" prefWidth="1230.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admission_help.DuInfoController">
+   <children>
+      <VBox layoutX="11.0" layoutY="64.0" prefHeight="624.0" prefWidth="865.0" style="-fx-background-radius: 25;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="365.0" AnchorPane.topAnchor="64.0">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <HBox prefHeight="633.0" prefWidth="865.0" style="-fx-background-color: #F7F5F2; -fx-background-radius: 25;">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" top="5.0" />
+               </VBox.margin>
+               <children>
+                  <VBox prefHeight="594.0" prefWidth="331.0">
+                     <HBox.margin>
+                        <Insets left="280.0" />
+                     </HBox.margin>
+                     <children>
+                        <MenuButton fx:id="btnDept" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: black; -fx-background-radius: 15;" styleClass="buttons" stylesheets="@uniList.css" text="Departments" textAlignment="CENTER" textFill="WHITE">
+                          <items>
+                            <MenuItem fx:id="btnAunit" mnemonicParsing="false" onAction="#openAunitWindow" style="fx-background-color: black;" text="'A' Unit" />
+                            <MenuItem fx:id="btnBunit" mnemonicParsing="false" onAction="#openBunitWindow" text="'B' Unit" />
+                              <MenuItem fx:id="btnCunit" mnemonicParsing="false" onAction="#openCunitWindow" text="'C' Unit" />
+                          </items>
+                           <VBox.margin>
+                              <Insets left="60.0" top="150.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </MenuButton>
+                        <Button fx:id="btnResearch" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="50.0" mnemonicParsing="false" onAction="#openResearchWindow" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: black; -fx-background-radius: 15;" styleClass="buttons" stylesheets="@uniList.css" text="Research Facilities" textAlignment="CENTER" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets left="60.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="btnContact" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="50.0" mnemonicParsing="false" onAction="#openConactWindow" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: black; -fx-background-radius: 15;" styleClass="buttons" stylesheets="@uniList.css" text="Contact Details" textAlignment="CENTER" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets left="60.0" top="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <VBox prefHeight="307.0" prefWidth="331.0">
+                           <children>
+                              <HBox prefHeight="37.0" prefWidth="331.0">
+                                 <children>
+                                    <Button fx:id="btnBack" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goBack" prefHeight="35.0" prefWidth="65.0" style="-fx-background-color: black;                                             -fx-background-radius: 10;" styleClass="buttons" stylesheets="@uniList.css" text="Back" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="70.0" />
+                                       </HBox.margin>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnHome" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#goHome" prefHeight="35.0" prefWidth="67.0" style="-fx-background-color: black;                                              -fx-background-radius: 10;" styleClass="buttons" stylesheets="@uniList.css" text="Home" textFill="WHITE">
+                                       <HBox.margin>
+                                          <Insets left="50.0" />
+                                       </HBox.margin>
+                                       <effect>
+                                          <DropShadow />
+                                       </effect>
+                                       <font>
+                                          <Font name="Arial Bold" size="14.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="220.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="930.0" layoutY="69.0" prefHeight="614.0" prefWidth="353.0" style="-fx-background-color: #F7F5F2;
+       -fx-background-radius: 25;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="872.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="69.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <ImageView fx:id="duimageview" fitHeight="297.0" fitWidth="307.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../images/du_logo.png" />
+               </image>
+               <VBox.margin>
+                  <Insets left="28.0" top="20.0" />
+               </VBox.margin>
+            </ImageView>
+         </children></VBox>
+      <HBox layoutX="5.0" layoutY="4.0" prefHeight="56.0" prefWidth="1219.0" style="-fx-background-color: #8D8DAA; -fx-background-radius: 15;">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="57.0" prefWidth="1219.0" text="Information about University of Dhaka" textAlignment="CENTER">
+               <font>
+                  <Font name="Baloo Bhai Regular" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
