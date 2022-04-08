@@ -14,21 +14,21 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="688.0" prefWidth="1230.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admission_help.DuInfoController">
+<AnchorPane prefHeight="580.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admssionhelp.DuInfoController">
    <children>
-      <VBox layoutX="11.0" layoutY="64.0" prefHeight="624.0" prefWidth="865.0" style="-fx-background-radius: 25;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="365.0" AnchorPane.topAnchor="64.0">
+      <VBox layoutX="11.0" layoutY="58.0" prefHeight="522.0" prefWidth="655.0" style="-fx-background-radius: 25;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="365.0" AnchorPane.topAnchor="58.0">
          <effect>
             <DropShadow />
          </effect>
          <children>
-            <HBox prefHeight="633.0" prefWidth="865.0" style="-fx-background-color: #F7F5F2; -fx-background-radius: 25;">
+            <HBox prefHeight="523.0" prefWidth="650.0" style="-fx-background-color: #F7F5F2; -fx-background-radius: 25;">
                <VBox.margin>
                   <Insets bottom="5.0" left="5.0" top="5.0" />
                </VBox.margin>
                <children>
-                  <VBox prefHeight="594.0" prefWidth="331.0">
+                  <VBox prefHeight="506.0" prefWidth="326.0">
                      <HBox.margin>
-                        <Insets left="280.0" />
+                        <Insets left="180.0" />
                      </HBox.margin>
                      <children>
                         <MenuButton fx:id="btnDept" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="50.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: black; -fx-background-radius: 15;" styleClass="buttons" stylesheets="@uniList.css" text="Departments" textAlignment="CENTER" textFill="WHITE">
@@ -44,7 +44,7 @@
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </MenuButton>
-                        <Button fx:id="btnResearch" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="50.0" mnemonicParsing="false" onAction="#openResearchWindow" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: black; -fx-background-radius: 15;" styleClass="buttons" stylesheets="@uniList.css" text="Research Facilities" textAlignment="CENTER" textFill="WHITE">
+                        <Button fx:id="btnResearch" alignment="CENTER" contentDisplay="CENTER" layoutX="50.0" layoutY="50.0" mnemonicParsing="false" onAction="#openResearchWindow" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: black; -fx-background-radius: 15;" styleClass="buttons" stylesheets="@uniList.css" text="Research Facilities" textAlignment="CENTER" textFill="WHITE">
                            <VBox.margin>
                               <Insets left="60.0" top="10.0" />
                            </VBox.margin>
@@ -60,7 +60,7 @@
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Button>
-                        <VBox prefHeight="307.0" prefWidth="331.0">
+                        <VBox prefHeight="159.0" prefWidth="326.0">
                            <children>
                               <HBox prefHeight="37.0" prefWidth="331.0">
                                  <children>
@@ -88,7 +88,7 @@
                                     </Button>
                                  </children>
                                  <VBox.margin>
-                                    <Insets top="220.0" />
+                                    <Insets top="100.0" />
                                  </VBox.margin>
                               </HBox>
                            </children>
@@ -102,22 +102,21 @@
             </HBox>
          </children>
       </VBox>
-      <VBox layoutX="930.0" layoutY="69.0" prefHeight="614.0" prefWidth="353.0" style="-fx-background-color: #F7F5F2;
-       -fx-background-radius: 25;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="872.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="69.0">
+      <VBox layoutX="669.0" layoutY="63.0" prefHeight="512.0" prefWidth="346.0" style="-fx-background-color: #F7F5F2;        -fx-background-radius: 25;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="669.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="63.0">
          <effect>
             <InnerShadow />
          </effect>
          <children>
-            <ImageView fx:id="duimageview" fitHeight="297.0" fitWidth="307.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="297.0" fitWidth="307.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../images/du_logo.png" />
+                  <Image url="@../images/du_logo.png" />
                </image>
                <VBox.margin>
                   <Insets left="28.0" top="20.0" />
                </VBox.margin>
             </ImageView>
          </children></VBox>
-      <HBox layoutX="5.0" layoutY="4.0" prefHeight="56.0" prefWidth="1219.0" style="-fx-background-color: #8D8DAA; -fx-background-radius: 15;">
+      <HBox layoutX="5.0" layoutY="4.0" prefHeight="50.0" prefWidth="1011.0" style="-fx-background-color: #8D8DAA; -fx-background-radius: 15;">
          <effect>
             <InnerShadow />
          </effect>
