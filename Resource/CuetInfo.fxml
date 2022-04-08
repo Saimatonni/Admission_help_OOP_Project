@@ -12,21 +12,21 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="580.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admission_help.CuetInfoController">
+<AnchorPane prefHeight="580.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admssionhelp.CuetInfoController">
     <children>
-        <VBox layoutX="11.0" layoutY="64.0" prefHeight="688.0" prefWidth="865.0" style="-fx-background-radius: 25;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="365.0" AnchorPane.topAnchor="64.0">
+        <VBox layoutX="11.0" layoutY="56.0" prefHeight="524.0" prefWidth="656.0" style="-fx-background-radius: 25;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="365.0" AnchorPane.topAnchor="56.0">
             <effect>
                 <DropShadow />
             </effect>
             <children>
-                <HBox prefHeight="633.0" prefWidth="865.0" style="-fx-background-color: #F7F5F2; -fx-background-radius: 25;">
+                <HBox prefHeight="521.0" prefWidth="651.0" style="-fx-background-color: #F7F5F2; -fx-background-radius: 25;">
                     <VBox.margin>
                         <Insets bottom="5.0" left="5.0" top="5.0" />
                     </VBox.margin>
                     <children>
                         <VBox prefHeight="594.0" prefWidth="331.0">
                             <HBox.margin>
-                                <Insets left="280.0" />
+                                <Insets left="180.0" />
                             </HBox.margin>
                             <children>
                                 <Button fx:id="btnDept" mnemonicParsing="false" onAction="#openDeptWindow" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: black;                                         -fx-background-radius: 15;" styleClass="buttons" stylesheets="@uniList.css" text="Departments" textFill="WHITE">
@@ -81,7 +81,7 @@
                                                 </Button>
                                             </children>
                                             <VBox.margin>
-                                                <Insets top="220.0" />
+                                                <Insets top="100.0" />
                                             </VBox.margin>
                                         </HBox>
                                     </children>
@@ -95,21 +95,21 @@
                 </HBox>
             </children>
         </VBox>
-        <VBox layoutX="930.0" layoutY="69.0" prefHeight="614.0" prefWidth="353.0" style="-fx-background-color: #F7F5F2;         -fx-background-radius: 25;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="872.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="69.0">
+        <VBox layoutX="668.0" layoutY="59.0" prefHeight="516.0" prefWidth="348.0" style="-fx-background-color: #F7F5F2;         -fx-background-radius: 25;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="668.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="59.0">
             <effect>
                 <InnerShadow />
             </effect>
             <children>
-                <ImageView fx:id="cuetimageview" fitHeight="428.0" fitWidth="303.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fitHeight="428.0" fitWidth="303.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../../../images/cuet_logo.png" />
+                        <Image url="@../images/cuet_logo.png" />
                     </image>
                     <VBox.margin>
                         <Insets left="24.0" top="-25.0" />
                     </VBox.margin>
                 </ImageView>
             </children></VBox>
-        <HBox layoutX="5.0" layoutY="2.0" prefHeight="57.0" prefWidth="1221.0" style="-fx-background-color: #8D8DAA; -fx-background-radius: 25;">
+        <HBox layoutX="5.0" layoutY="2.0" prefHeight="50.0" prefWidth="1016.0" style="-fx-background-color: #8D8DAA; -fx-background-radius: 25;">
             <children>
                 <Label alignment="CENTER" prefHeight="60.0" prefWidth="1221.0" text="Information about CUET">
                     <font>
