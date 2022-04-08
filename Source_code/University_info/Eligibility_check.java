@@ -1,24 +1,11 @@
 package com.example.admission_help.universityInfo;
 
 import java.io.IOException;
-import java.io.FileWriter;
-import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.BufferedReader;
 
 import com.example.admission_help.Student.student;
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
-import java.io.File;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class Eligibility_check implements Eligibility_In{
    student obj=new student();
@@ -56,12 +43,12 @@ public class Eligibility_check implements Eligibility_In{
               (obj.ssc_group.equals("Science")|| obj.ssc_group.equals("Arts") || obj.ssc_group.equals("Commerce"))
               && (obj.hsc_group.equals("Science")|| obj.hsc_group.equals("Arts") || obj.hsc_group.equals("Commerce"))) {
          System.out.println("YES");
-         return print(obj);
+         return Eligible_List(obj);
       }
       else return "Please Input In right Formate. Everything should be separated by coma\n";
 
    }
-   public String print(student obj)
+   public String Eligible_List(student obj)
    {
       String ans="";
       try {
