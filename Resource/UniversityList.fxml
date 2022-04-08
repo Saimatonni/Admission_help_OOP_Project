@@ -13,38 +13,25 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="688.0" prefWidth="1230.0" style="-fx-background-radius: 25;" stylesheets="@uniList.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admission_help.UniversityListController">
+<AnchorPane prefHeight="580.0" prefWidth="1020.0" style="-fx-background-radius: 25;" stylesheets="@uniList.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admssionhelp.UniversityListController">
    <children>
-      <HBox prefHeight="77.0" prefWidth="1223.0">
+      <HBox prefHeight="50.0" prefWidth="1016.0" style="-fx-background-color: #46244C; -fx-background-radius: 25;" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="5.0">
          <children>
-            <VBox prefHeight="72.0" prefWidth="1231.0" style="-fx-background-color: #46244C; -fx-background-radius: 25;">
-               <children>
-                  <Label alignment="CENTER" prefHeight="63.0" prefWidth="1218.0" text="University List" textFill="WHITE">
-                     <font>
-                        <Font name="Baloo Bhai Regular" size="36.0" />
-                     </font>
-                     <effect>
-                        <DropShadow />
-                     </effect>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </Label>
-               </children>
-               <HBox.margin>
-                  <Insets left="10.0" top="5.0" />
-               </HBox.margin>
+            <Label alignment="CENTER" prefHeight="40.0" prefWidth="1020.0" text="University List" textFill="WHITE">
+               <font>
+                  <Font name="Baloo Bhai Regular" size="36.0" />
+               </font>
                <effect>
-                  <InnerShadow />
+                  <DropShadow />
                </effect>
-            </VBox>
+            </Label>
          </children>
       </HBox>
-      <VBox layoutX="12.0" layoutY="84.0" prefHeight="599.0" prefWidth="774.0" style="-fx-background-color: #8479E1; -fx-background-radius: 25;" AnchorPane.bottomAnchor="5.0" AnchorPane.topAnchor="84.0">
+      <VBox layoutX="12.0" layoutY="76.0" prefHeight="496.0" prefWidth="641.0" style="-fx-background-color: #8479E1; -fx-background-radius: 25;" AnchorPane.bottomAnchor="8.0" AnchorPane.topAnchor="76.0">
          <children>
             <Button fx:id="btnDU" mnemonicParsing="false" onAction="#openDuWindow" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: black; -fx-background-radius: 10;" styleClass="buttons" stylesheets="@uniList.css" text="University of Dhaka" textFill="WHITE">
                <VBox.margin>
-                  <Insets left="280.0" top="30.0" />
+                  <Insets left="240.0" top="30.0" />
                </VBox.margin>
                <font>
                   <Font name="System Bold" size="14.0" />
@@ -55,7 +42,7 @@
             </Button>
             <Button fx:id="btnBUET" mnemonicParsing="false" onAction="#openBuetWindow" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: black; -fx-background-radius: 10;" styleClass="buttons" stylesheets="@uniList.css" text="BUET" textFill="WHITE">
                <VBox.margin>
-                  <Insets left="280.0" top="10.0" />
+                  <Insets left="240.0" top="10.0" />
                </VBox.margin>
                <font>
                   <Font name="System Bold" size="14.0" />
@@ -66,7 +53,7 @@
             </Button>
             <Button fx:id="btnKUET" mnemonicParsing="false" onAction="#openKuetWindow" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: black; -fx-background-radius: 10;" styleClass="buttons" stylesheets="@uniList.css" text="KUET" textFill="WHITE">
                <VBox.margin>
-                  <Insets left="280.0" top="10.0" />
+                  <Insets left="240.0" top="10.0" />
                </VBox.margin>
                <font>
                   <Font name="System Bold" size="14.0" />
@@ -77,7 +64,7 @@
             </Button>
             <Button fx:id="btnCUET" mnemonicParsing="false" onAction="#openCuetWindow" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: black; -fx-background-radius: 10;" styleClass="buttons" stylesheets="@uniList.css" text="CUET" textFill="WHITE">
                <VBox.margin>
-                  <Insets left="280.0" top="10.0" />
+                  <Insets left="240.0" top="10.0" />
                </VBox.margin>
                <font>
                   <Font name="System Bold" size="14.0" />
@@ -88,7 +75,7 @@
             </Button>
             <Button fx:id="btnRUET" mnemonicParsing="false" onAction="#openRuetWindow" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: black; -fx-background-radius: 10;" styleClass="buttons" stylesheets="@uniList.css" text="RUET" textFill="WHITE">
                <VBox.margin>
-                  <Insets left="280.0" top="10.0" />
+                  <Insets left="240.0" top="10.0" />
                </VBox.margin>
                <font>
                   <Font name="System Bold" size="14.0" />
@@ -99,7 +86,7 @@
             </Button>
             <Button fx:id="btnSUST" mnemonicParsing="false" onAction="#openSustWindow" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: black; -fx-background-radius: 10;" styleClass="buttons" stylesheets="@uniList.css" text="SUST" textFill="WHITE">
                <VBox.margin>
-                  <Insets left="280.0" top="10.0" />
+                  <Insets left="240.0" top="10.0" />
                </VBox.margin>
                <font>
                   <Font name="System Bold" size="14.0" />
@@ -110,7 +97,7 @@
             </Button>
             <Button fx:id="btnJU" mnemonicParsing="false" onAction="#openJuWindow" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: black; -fx-background-radius: 10;" styleClass="buttons" stylesheets="@uniList.css" text="Jahangirnagar University" textFill="WHITE">
                <VBox.margin>
-                  <Insets left="280.0" top="10.0" />
+                  <Insets left="240.0" top="10.0" />
                </VBox.margin>
                <font>
                   <Font name="System Bold" size="14.0" />
@@ -121,7 +108,7 @@
             </Button>
             <Button fx:id="btnRU" mnemonicParsing="false" onAction="#openRuWindow" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: black; -fx-background-radius: 10;" styleClass="buttons" stylesheets="@uniList.css" text="Rajshahi University" textFill="WHITE">
                <VBox.margin>
-                  <Insets left="280.0" top="10.0" />
+                  <Insets left="240.0" top="10.0" />
                </VBox.margin>
                <font>
                   <Font name="System Bold" size="14.0" />
@@ -132,7 +119,7 @@
             </Button>
             <Button fx:id="btnCU" mnemonicParsing="false" onAction="#openCuWindow" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: black; -fx-background-radius: 10;" styleClass="buttons" stylesheets="@uniList.css" text="Chittagong University" textFill="WHITE">
                <VBox.margin>
-                  <Insets left="280.0" top="10.0" />
+                  <Insets left="240.0" top="10.0" />
                </VBox.margin>
                <font>
                   <Font name="System Bold" size="14.0" />
@@ -143,7 +130,7 @@
             </Button>
             <Button fx:id="btnBUTEX" mnemonicParsing="false" onAction="#openButexWindow" prefHeight="30.0" prefWidth="190.0" style="-fx-background-color: black; -fx-background-radius: 10;" styleClass="buttons" stylesheets="@uniList.css" text="BUTEX" textFill="WHITE">
                <VBox.margin>
-                  <Insets left="280.0" top="10.0" />
+                  <Insets left="240.0" top="10.0" />
                </VBox.margin>
                <font>
                   <Font name="System Bold" size="14.0" />
@@ -159,7 +146,7 @@
                         <Font size="14.0" />
                      </font>
                      <HBox.margin>
-                        <Insets left="278.0" />
+                        <Insets left="236.0" />
                      </HBox.margin>
                   </Button>
                   <Button fx:id="btnHome" mnemonicParsing="false" onAction="#goHome" prefHeight="40.0" prefWidth="77.0" style="-fx-background-color: black; -fx-background-radius: 10;" styleClass="buttons" stylesheets="@uniList.css" text="Home" textFill="WHITE">
@@ -172,7 +159,7 @@
                   </Button>
                </children>
                <VBox.margin>
-                  <Insets top="90.0" />
+                  <Insets top="20.0" />
                </VBox.margin>
             </HBox>
          </children>
@@ -180,17 +167,17 @@
             <InnerShadow />
          </effect>
       </VBox>
-      <VBox layoutX="873.0" layoutY="84.0" prefHeight="579.0" prefWidth="430.0" style="-fx-background-color: #F7F5F2; -fx-background-radius: 25;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="795.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="84.0">
+      <VBox layoutX="665.0" layoutY="76.0" prefHeight="496.0" prefWidth="350.0" style="-fx-background-color: #F7F5F2; -fx-background-radius: 25;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="665.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="76.0">
          <effect>
             <InnerShadow />
          </effect>
          <children>
-            <ImageView fx:id="universitylistimageview" fitHeight="210.0" fitWidth="268.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="210.0" fitWidth="268.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../images/images.jpg" />
+                  <Image url="@../images/images.jpg" />
                </image>
                <VBox.margin>
-                  <Insets left="80.0" top="40.0" />
+                  <Insets left="40.0" top="40.0" />
                </VBox.margin>
                <effect>
                   <SepiaTone />
