@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="580.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admssionhelp.CuetInfoController">
+<AnchorPane prefHeight="580.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admission_help.CuetInfoController">
     <children>
         <VBox layoutX="11.0" layoutY="56.0" prefHeight="524.0" prefWidth="656.0" style="-fx-background-radius: 25;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="365.0" AnchorPane.topAnchor="56.0">
             <effect>
@@ -100,9 +100,9 @@
                 <InnerShadow />
             </effect>
             <children>
-                <ImageView fitHeight="428.0" fitWidth="303.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="cuetimageview" fitHeight="428.0" fitWidth="303.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../images/cuet_logo.png" />
+                        <Image url="@../../../../../../images/cuet_logo.png" />
                     </image>
                     <VBox.margin>
                         <Insets left="24.0" top="-25.0" />

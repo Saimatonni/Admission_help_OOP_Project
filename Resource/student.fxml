@@ -178,11 +178,11 @@
             <Font name="Britannic Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="nametextfield" layoutX="116.0" layoutY="103.0" prefHeight="21.0" prefWidth="149.0">
+      <TextField fx:id="nametextfield" layoutX="116.0" layoutY="103.0" prefHeight="21.0" prefWidth="149.0" style="-fx-background-radius: 5;">
          <padding>
             <Insets left="7.0" />
          </padding></TextField>
-      <TextField fx:id="sscgpatextfield" layoutX="121.0" layoutY="307.0" prefHeight="3.0" prefWidth="157.0">
+      <TextField fx:id="sscgpatextfield" layoutX="121.0" layoutY="307.0" prefHeight="3.0" prefWidth="157.0" style="-fx-background-radius: 5;">
          <padding>
             <Insets left="7.0" />
          </padding></TextField>
@@ -196,11 +196,11 @@
             <Font name="Britannic Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="sscgrouptextfield" layoutX="121.0" layoutY="165.0" prefHeight="21.0" prefWidth="149.0">
+      <TextField fx:id="sscgrouptextfield" layoutX="121.0" layoutY="165.0" prefHeight="21.0" prefWidth="149.0" style="t: 5;">
          <padding>
             <Insets left="7.0" />
          </padding></TextField>
-      <TextField fx:id="hscgpatextfield" layoutX="121.0" layoutY="377.0" prefHeight="3.0" prefWidth="157.0">
+      <TextField fx:id="hscgpatextfield" layoutX="121.0" layoutY="377.0" prefHeight="3.0" prefWidth="157.0" style="-fx-background-radius: 5;">
          <padding>
             <Insets left="7.0" />
          </padding></TextField>
@@ -209,7 +209,7 @@
             <Font name="Britannic Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="hscgrouptextfield" layoutX="121.0" layoutY="240.0" prefHeight="3.0" prefWidth="149.0">
+      <TextField fx:id="hscgrouptextfield" layoutX="121.0" layoutY="240.0" prefHeight="3.0" prefWidth="149.0" style="-fx-background-radius: 5;">
          <padding>
             <Insets left="7.0" />
          </padding></TextField>
@@ -218,11 +218,11 @@
             <Font name="Britannic Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="divisiontextfield" layoutX="121.0" layoutY="448.0" prefHeight="3.0" prefWidth="157.0">
+      <TextField fx:id="divisiontextfield" layoutX="121.0" layoutY="448.0" prefHeight="3.0" prefWidth="157.0" style="-fx-background-radius: 5;">
          <padding>
             <Insets left="7.0" />
          </padding></TextField>
-      <Button layoutX="117.0" layoutY="504.0" mnemonicParsing="false" onAction="#addStudentonAction" prefHeight="39.0" prefWidth="157.0" style="-fx-background-color: #EE345F; -fx-border-color: #4567EF; -fx-border-radius: 5;" text="ADD">
+      <Button layoutX="117.0" layoutY="504.0" mnemonicParsing="false" onAction="#addStudentonAction" prefHeight="39.0" prefWidth="157.0" style="-fx-background-color: #EE345F; -fx-background-radius: 25;" text="SAVE">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
@@ -240,7 +240,7 @@
             <ColorAdjust />
          </effect>
       </ImageView>
-      <Label layoutX="495.0" layoutY="173.0" prefHeight="53.0" prefWidth="191.0" text="Name       :" textFill="#f51d1d">
+      <Label layoutX="495.0" layoutY="173.0" prefHeight="53.0" prefWidth="191.0" text="Name       :" textFill="#f22b2b">
          <font>
             <Font name="System Bold Italic" size="36.0" />
          </font>

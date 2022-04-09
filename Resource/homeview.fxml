@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.effect.DropShadow?>
@@ -14,9 +13,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1020.0" style="-fx-background-color: #744F88;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admission_help.homeviewController">
     <children>
-        <ImageView fx:id="bannerimageview" fitHeight="300.0" fitWidth="530.0" layoutX="242.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fx:id="bannerimageview" fitHeight="300.0" fitWidth="500.0" layoutX="185.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
             <image>
-                <Image url="@../../../../../../images/banner2.jpg" />
+                <Image url="@../../../../../../images/ban8.png" />
             </image>
             <effect>
                 <DropShadow />
@@ -125,55 +124,30 @@
         </VBox>
         <Label contentDisplay="CENTER" layoutX="356.0" layoutY="35.0" opacity="0.94" text="ADMISSION HELP" textAlignment="CENTER" textFill="#2d2d37">
             <font>
-                <Font name="Leelawadee UI Bold" size="36.0" />
+                <Font name="Franklin Gothic Heavy Italic" size="36.0" />
             </font>
             <effect>
                 <Glow />
             </effect>
         </Label>
-        <HBox alignment="CENTER_LEFT" layoutX="857.0" layoutY="61.0" onMouseClicked="#logout" prefHeight="33.0" prefWidth="149.0" style="-fx-background-color: #452153;">
-            <children>
-                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="80.0">
-                    <children>
-                        <HBox alignment="CENTER" prefHeight="60.0" prefWidth="80.0">
-                            <children>
-                                <HBox alignment="CENTER" prefHeight="46.0" prefWidth="71.0" style="-fx-background-color: #DD5043;">
-                                    <children>
-                                        <ImageView fx:id="logoutimageview2" fitHeight="32.0" fitWidth="25.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@../../../../../../images/Circles.png" />
-                                            </image>
-                                            <effect>
-                                                <ColorAdjust brightness="1.0" />
-                                            </effect>
-                                        </ImageView>
-                                    </children>
-                                </HBox>
-                            </children>
-                        </HBox>
-                    </children>
-                </HBox>
-                <Label id="fd_logout" prefHeight="33.0" prefWidth="150.0" text="Logout" textFill="WHITE">
-                    <font>
-                        <Font size="20.0" />
-                    </font>
-                    <padding>
-                        <Insets left="12.0" />
-                    </padding>
-                    <effect>
-                        <DropShadow blurType="GAUSSIAN" />
-                    </effect>
-                </Label>
-            </children>
-            <effect>
-                <DropShadow blurType="GAUSSIAN" />
-            </effect>
-        </HBox>
-        <Label layoutX="363.0" layoutY="109.0" prefHeight="48.0" prefWidth="289.0" text="Welcome" textFill="#9f8cd7">
+        <Label layoutX="193.0" layoutY="104.0" prefHeight="48.0" prefWidth="289.0" text="Welcome" textFill="#9f8cd7">
             <font>
-                <Font name="Britannic Bold" size="64.0" />
+                <Font name="Serif Bold Italic" size="64.0" />
             </font>
         </Label>
+      <ImageView fx:id="banner2imageview" fitHeight="168.0" fitWidth="200.0" layoutX="707.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../images/ban9.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="banner3imageview" fitHeight="149.0" fitWidth="193.0" layoutX="695.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../images/ban1.png" />
+         </image>
+         <effect>
+            <ColorAdjust />
+         </effect>
+      </ImageView>
 
     </children>
 </AnchorPane>
