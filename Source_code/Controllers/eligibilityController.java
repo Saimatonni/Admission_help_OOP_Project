@@ -1,4 +1,4 @@
-package com.example.admission_help.controllers;
+package com.example.admission_help;
 
 import com.example.admission_help.universityInfo.Eligibility_check;
 import javafx.event.ActionEvent;

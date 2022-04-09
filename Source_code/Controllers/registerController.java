@@ -1,7 +1,6 @@
 package com.example.admission_help;
 
 import com.example.admission_help.Student.register;
-import com.example.admission_help.database.dbconnect;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -20,13 +19,13 @@ import javafx.event.ActionEvent;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class registerController implements Initializable{
     @FXML
     private ImageView registerimageview;
+    @FXML
+    private ImageView regiimageview;
     @FXML
     private Button closeButton;
     @FXML
@@ -49,6 +48,10 @@ public class registerController implements Initializable{
         File registerFile = new File("images/register-here-button.png");
         Image registerImage = new Image(registerFile.toURI().toString());
         registerimageview.setImage(registerImage);
+
+        File regiFile = new File("images/ban7.png");
+        Image regiImage = new Image(regiFile.toURI().toString());
+        regiimageview.setImage(regiImage);
 
     }
 
@@ -97,10 +100,10 @@ public class registerController implements Initializable{
         String gmail = gmailTextfield.getText();
         reg.setGmail(gmail);
         String username = usernameTextfield.getText();
-        reg.setPassword(username);
+        reg.setUsername(username);
         String password = passwordTextfield.getText();
         reg.setPassword(password);
-        reg.inputvalues(name,gmail,username,password);
+        reg.registration(name,gmail,username,password);
 
     }
 

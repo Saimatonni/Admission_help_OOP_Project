@@ -1,4 +1,4 @@
-package com.example.admission_help.controllers;
+package com.example.admission_help;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -33,10 +33,14 @@ public class homeviewController implements Initializable {
     private ImageView questionsimageview;
     @FXML
     private ImageView logoutimageview;
-    @FXML
-    private ImageView logoutimageview2;
+    ;
     @FXML
     private ImageView bannerimageview;
+    @FXML
+    private ImageView banner2imageview;
+    @FXML
+    private ImageView banner3imageview;
+
 
 
     @Override
@@ -69,17 +73,22 @@ public class homeviewController implements Initializable {
         Image dashImage = new Image(dashFile.toURI().toString());
         dashimageview.setImage(dashImage);
 
-        File bannerFile = new File("images/banner2.jpg");
+        File bannerFile = new File("images/ban8.png");
         Image bannerImage = new Image(bannerFile.toURI().toString());
         bannerimageview.setImage(bannerImage);
+
+        File banner3File = new File("images/ban1.png");
+        Image banner3Image = new Image(banner3File.toURI().toString());
+        banner3imageview.setImage(banner3Image);
+
+        File banner2File = new File("images/ban9.png");
+        Image banner2Image = new Image(banner2File.toURI().toString());
+        banner2imageview.setImage(banner2Image);
 
         File logoutFile = new File("images/Circles.png");
         Image logoutImage = new Image(logoutFile.toURI().toString());
         logoutimageview.setImage(logoutImage);
 
-        File logoutFile2 = new File("images/Circles.png");
-        Image logoutImage2 = new Image(logoutFile2.toURI().toString());
-        logoutimageview2.setImage(logoutImage2);
 
 
 
@@ -118,17 +127,7 @@ public class homeviewController implements Initializable {
 
     }
 
-    @FXML
-    public void logout(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
-
-        Node node = (Node) event.getSource();
-
-        Stage stage = (Stage) node.getScene().getWindow();
-
-        stage.setScene(new Scene(root));
-
-    }
+    
     @FXML
     public void euniversity(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Eligibility.fxml"));

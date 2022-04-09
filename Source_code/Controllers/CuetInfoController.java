@@ -1,4 +1,4 @@
-package com.example.admission_help.controllers;
+package com.example.admission_help;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

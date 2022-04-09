@@ -1,4 +1,4 @@
-package com.example.admission_help.controllers;
+package com.example.admission_help;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

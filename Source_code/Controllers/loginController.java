@@ -1,5 +1,6 @@
-package com.example.admission_help.controllers;
+package com.example.admission_help;
 
+import com.example.admission_help.Student.login;
 import com.example.admission_help.database.dbconnect;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -50,38 +51,25 @@ public class loginController implements Initializable {
     }
 
     public void loginButtonOnAction(ActionEvent event) throws IOException {
+        login log = new login();
+        String username = usernameTextField.getText();
+        log.setUsername(username);
+        String password = enterPasswordField.getText();
+        log.setPassword(password);
+        if(username.isBlank()==false && password.isBlank() == false){
+            int check =log.verify(username,password);
+             if(check == 1){
+                 Parent root = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
 
-        if(usernameTextField.getText().isBlank()==false && enterPasswordField.getText().isBlank() == false){
-            dbconnect connectnow = new dbconnect();
-            Connection connectdb = connectnow.getConnection();
+                 Node node = (Node) event.getSource();
 
-            String verifylogin = "SELECT count(1) FROM admission_login WHERE username = '" + usernameTextField.getText() + "' AND password ='" + enterPasswordField.getText() + "'";
+                 Stage stage = (Stage) node.getScene().getWindow();
 
-            try{
-                Statement statement = connectdb.createStatement();
-                ResultSet queryresult = statement.executeQuery(verifylogin);
-                while(queryresult.next()){
-                    if(queryresult.getInt(1)==1){
-                        //loginMessageLabel.setText("congrats");
-                        //createAccountFrom();
-                        Parent root = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
-
-                        Node node = (Node) event.getSource();
-
-                        Stage stage = (Stage) node.getScene().getWindow();
-
-                        stage.setScene(new Scene(root));
-
-                    }
-                    else{
-                        loginMessageLabel.setText("Invalid");
-                    }
-                }
-
-            }catch(Exception e){
-                e.printStackTrace();
-                e.getCause();
-            }
+                 stage.setScene(new Scene(root));
+             }
+             else{
+                 loginMessageLabel.setText("Invalid");
+             }
         }
         else{
             loginMessageLabel.setText("please enter username and password");
