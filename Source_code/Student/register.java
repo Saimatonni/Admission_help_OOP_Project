@@ -5,7 +5,7 @@ import com.example.admission_help.database.dbconnect;
 import java.sql.Connection;
 import java.sql.Statement;
 
-public class register implements register_In{
+public class register implements user {
     private String name = "";
     private String gmail = "";
     private String username = "";
@@ -39,7 +39,7 @@ public class register implements register_In{
         return "Name     :  " + name + "\ngmail     :  " + gmail + "\nusername      :  " + username + "\npassword     :  " + password + '\n';
 
     }
-    public void inputvalues(String name, String gmail,String username, String password){
+    public void registration(String name, String gmail,String username, String password){
         dbconnect connectnow = new dbconnect();
         Connection connectdb = connectnow.getConnection();
         String insertFields = "INSERT INTO login.admission_login (name, gmail, username, password) VALUES ('";
@@ -55,5 +55,8 @@ public class register implements register_In{
             e.printStackTrace();
             e.getCause();
         }
+    }
+    public int verify(String username,String password){
+        return 0;
     }
 }
