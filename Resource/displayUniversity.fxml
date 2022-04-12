@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1020.0" style="-fx-background-color: #744F88;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admission_help.displayUniversityCon">
+    <children>
+      <TableView fx:id="tableView" layoutX="147.0" layoutY="139.0" prefHeight="369.0" prefWidth="797.0">
+        <columns>
+          <TableColumn id="idColumn" fx:id="idc" editable="false" prefWidth="63.0" text="ID" />
+          <TableColumn id="FNameColumn" fx:id="universityc" prefWidth="162.0" text="University Name" />
+            <TableColumn minWidth="0.0" prefWidth="0.0" text="Last Name" />
+            <TableColumn id="LNameColumn" fx:id="unitc" prefWidth="93.0" text="UNIT" />
+            <TableColumn id="typeColumn" fx:id="hscgpac" minWidth="0.0" prefWidth="117.0" text="HSC GPA" />
+            <TableColumn id="GenderColumn" fx:id="hscsteamc" prefWidth="119.0" text="HSC STEAM" />
+            <TableColumn id="dobColumn" fx:id="sscgpac" prefWidth="94.0" text="SSC GPA" />
+            <TableColumn id="addressColumn" fx:id="sscsteamc" prefWidth="148.0" text="SSC STEAM" />
+        </columns>
+      </TableView>
+      <Button layoutX="147.0" layoutY="67.0" mnemonicParsing="false" onMouseClicked="#loadData" prefHeight="38.0" prefWidth="110.0" text="Refresh">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="800.0" layoutY="55.0" mnemonicParsing="false" onMouseClicked="#rmData" prefHeight="38.0" prefWidth="158.0" text="Remove Selected">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Button>
+      <Button layoutX="24.0" layoutY="508.0" mnemonicParsing="false" onMouseClicked="#back1" prefHeight="31.0" prefWidth="87.0" style="-fx-background-color: #DD5043; -fx-background-radius: 25;" text="Back">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

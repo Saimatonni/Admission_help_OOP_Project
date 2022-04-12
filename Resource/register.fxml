@@ -9,40 +9,41 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="584.0" prefWidth="631.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admission_help.registerController">
+<AnchorPane prefHeight="580.0" prefWidth="1020.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admission_help.registerController">
     <children>
-        <AnchorPane prefHeight="70.0" prefWidth="631.0" style="-fx-background-color: #E96151;">
+        <AnchorPane prefHeight="70.0" prefWidth="1020.0" style="-fx-background-color: #E96151;">
             <children>
-                <ImageView fx:id="registerimageview" fitHeight="60.0" fitWidth="83.0" layoutX="33.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                <ImageView fx:id="registerimageview" fitHeight="60.0" fitWidth="83.0" layoutX="39.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                     <image>
                         <Image url="@../../../../../../images/register-here-button.png" />
                     </image>
                 </ImageView>
-                <Label layoutX="159.0" layoutY="18.0" prefHeight="46.0" prefWidth="221.0" text="ADDMISSION HELP" textFill="#2f185b">
+                <Label layoutX="494.0" layoutY="12.0" prefHeight="46.0" prefWidth="221.0" text="ADDMISSION HELP" textFill="#2f185b">
                     <font>
                         <Font name="System Bold Italic" size="24.0" />
                     </font>
                 </Label>
-            <ImageView fx:id="regiimageview" fitHeight="60.0" fitWidth="147.0" layoutX="428.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="regiimageview" fitHeight="60.0" fitWidth="147.0" layoutX="812.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../../images/ban7.png" />
                </image>
             </ImageView>
             </children>
         </AnchorPane>
-        <Label layoutX="127.0" layoutY="88.0" prefHeight="18.0" prefWidth="76.0" text="Name" />
-        <TextField fx:id="nameTextfield" layoutX="126.0" layoutY="118.0" prefHeight="26.0" prefWidth="380.0" promptText="Name" />
-        <Label layoutX="132.0" layoutY="227.0" prefHeight="18.0" prefWidth="67.0" text="Username" />
-        <TextField fx:id="gmailTextfield" layoutX="126.0" layoutY="186.0" prefHeight="26.0" prefWidth="380.0" promptText="Gmail" />
-        <Label layoutX="127.0" layoutY="156.0" prefHeight="18.0" prefWidth="76.0" text="Gmail" />
-        <TextField fx:id="usernameTextfield" layoutX="126.0" layoutY="255.0" prefHeight="26.0" prefWidth="380.0" promptText="Username" />
-        <Label layoutX="132.0" layoutY="292.0" prefHeight="18.0" prefWidth="67.0" text="Password" />
-        <PasswordField fx:id="passwordTextfield" layoutX="126.0" layoutY="313.0" prefHeight="26.0" prefWidth="380.0" promptText="Password" />
-        <PasswordField fx:id="confirmpasswordfield" layoutX="126.0" layoutY="386.0" prefHeight="26.0" prefWidth="380.0" promptText="Confirm Password" />
-        <Label layoutX="127.0" layoutY="357.0" prefHeight="21.0" prefWidth="127.0" text="Confirm Password" />
-        <Button fx:id="registerButton" layoutX="126.0" layoutY="430.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="26.0" prefWidth="380.0" style="-fx-background-color: #1B01B1; -fx-background-radius: 25;" text=" Register Here" textFill="#f1f0fa" />
-        <Button fx:id="closeButton" layoutX="126.0" layoutY="529.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="26.0" prefWidth="380.0" style="-fx-background-color: #1B01B1; -fx-background-radius: 25;" text="Close" textFill="#f1f0fa" />
-        <Label fx:id="confirmpasswordlabel" alignment="CENTER" layoutX="118.0" layoutY="357.0" prefHeight="11.0" prefWidth="474.0" textAlignment="CENTER" textFill="#fa2311" />
-        <Button fx:id="haveaccoutButton" layoutX="126.0" layoutY="479.0" mnemonicParsing="false" onAction="#haveaccountButtonOnAction" prefHeight="26.0" prefWidth="380.0" style="-fx-background-color: #1B01B1; -fx-background-radius: 25;" text="Already have an account" textFill="#f1f0fa" />
+        <Label layoutX="449.0" layoutY="85.0" prefHeight="18.0" prefWidth="76.0" text="Name" />
+        <TextField fx:id="nameTextfield" layoutX="449.0" layoutY="118.0" prefHeight="26.0" prefWidth="380.0" promptText="Name" />
+        <Label layoutX="449.0" layoutY="226.0" prefHeight="18.0" prefWidth="67.0" text="Username" />
+        <TextField fx:id="gmailTextfield" layoutX="449.0" layoutY="187.0" prefHeight="26.0" prefWidth="380.0" promptText="Gmail" />
+        <Label layoutX="449.0" layoutY="157.0" prefHeight="18.0" prefWidth="76.0" text="Gmail" />
+        <TextField fx:id="usernameTextfield" layoutX="449.0" layoutY="253.0" prefHeight="26.0" prefWidth="380.0" promptText="Username" />
+        <Label layoutX="449.0" layoutY="290.0" prefHeight="18.0" prefWidth="67.0" text="Password" />
+        <PasswordField fx:id="passwordTextfield" layoutX="449.0" layoutY="319.0" prefHeight="26.0" prefWidth="380.0" promptText="Password" />
+        <PasswordField fx:id="confirmpasswordfield" layoutX="449.0" layoutY="386.0" prefHeight="26.0" prefWidth="380.0" promptText="Confirm Password" />
+        <Label layoutX="447.0" layoutY="358.0" prefHeight="21.0" prefWidth="127.0" text="Confirm Password" />
+        <Button fx:id="registerButton" layoutX="449.0" layoutY="430.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="26.0" prefWidth="380.0" style="-fx-background-color: #1B01B1; -fx-background-radius: 25;" text=" Register Here" textFill="#f1f0fa" />
+        <Button fx:id="closeButton" layoutX="449.0" layoutY="519.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="26.0" prefWidth="380.0" style="-fx-background-color: #1B01B1; -fx-background-radius: 25;" text="Close" textFill="#f1f0fa" />
+        <Label fx:id="confirmpasswordlabel" alignment="CENTER" layoutX="448.0" layoutY="358.0" prefHeight="21.0" prefWidth="464.0" textAlignment="CENTER" textFill="#fa2311" />
+        <Button fx:id="haveaccoutButton" layoutX="449.0" layoutY="475.0" mnemonicParsing="false" onAction="#haveaccountButtonOnAction" prefHeight="26.0" prefWidth="380.0" style="-fx-background-color: #1B01B1; -fx-background-radius: 25;" text="Already have an account" textFill="#f1f0fa" />
+      <AnchorPane layoutY="62.0" prefHeight="529.0" prefWidth="231.0" style="-fx-background-color: #E96151;" />
     </children>
 </AnchorPane>

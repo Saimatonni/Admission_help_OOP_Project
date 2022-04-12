@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1020.0" style="-fx-background-color: #744F88;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admission_help.viewController">
+    <children>
+        <Label contentDisplay="CENTER" layoutX="167.0" layoutY="66.0" opacity="0.94" prefHeight="107.0" prefWidth="397.0" text="ADMISSION HELP" textAlignment="CENTER" textFill="#2d2d37">
+            <font>
+                <Font name="Britannic Bold" size="48.0" />
+            </font>
+            <effect>
+                <Glow />
+            </effect>
+        </Label>
+        <HBox alignment="CENTER_LEFT" layoutX="564.0" layoutY="252.0" onMouseClicked="#user" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: #452153;">
+            <children>
+                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                    <children>
+                        <ImageView fx:id="userimageview" fitHeight="27.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../images/student.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="1.0" contrast="1.0" hue="0.21" saturation="1.0" />
+                            </effect>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <Label text="User" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                    <padding>
+                        <Insets left="5.0" />
+                    </padding>
+                </Label>
+            </children>
+            <effect>
+                <DropShadow blurType="TWO_PASS_BOX" />
+            </effect>
+        </HBox>
+        <HBox alignment="CENTER_LEFT" layoutX="227.0" layoutY="252.0" onMouseClicked="#admin" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: #452153;">
+            <children>
+                <HBox alignment="CENTER" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                    <children>
+                        <ImageView fx:id="adminimageview" fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../images/Male.png" />
+                            </image>
+                            <effect>
+                                <ColorAdjust brightness="1.0" />
+                            </effect>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <Label text="Admin" textFill="WHITE">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                    <padding>
+                        <Insets left="5.0" />
+                    </padding>
+                </Label>
+            </children>
+            <effect>
+                <DropShadow blurType="TWO_PASS_BOX" />
+            </effect>
+        </HBox>
+      <ImageView fx:id="bannerimageview" fitHeight="200.0" fitWidth="400.0" layoutX="666.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../../images/ban6.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
