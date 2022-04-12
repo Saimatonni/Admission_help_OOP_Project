@@ -71,7 +71,7 @@ public class UniversityListController implements Initializable {
 
     @FXML
     void goHome(ActionEvent event) throws IOException{
-            Parent root = FXMLLoader.load(getClass().getResource("homeview.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
 
             Node node = (Node) event.getSource();
 

@@ -49,11 +49,6 @@ public class eligibilityController implements Initializable {
     private Button myButton;
     @FXML
     private Label outputtext;
-    //private TextField eligiList;
-
-    /*public home(TextField eligiList) {
-           eligiList.setText("Hello");
-    }*/
 
 
     @Override

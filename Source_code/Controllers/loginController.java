@@ -59,7 +59,7 @@ public class loginController implements Initializable {
         if(username.isBlank()==false && password.isBlank() == false){
             int check =log.verify(username,password);
              if(check == 1){
-                 Parent root = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
+                 Parent root = FXMLLoader.load(getClass().getResource("view.fxml"));
 
                  Node node = (Node) event.getSource();
 
