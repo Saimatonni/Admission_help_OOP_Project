@@ -183,7 +183,6 @@ public class studentController implements Initializable {
         sscgpalabel.setText(str[3]);
         hscgrouplabel.setText(str[4]);
         divisionlabel.setText(str[5]);
-        System.out.println(std.getsscGroup()+std.gethscGroup());
 
      }
 
