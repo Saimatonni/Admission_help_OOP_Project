@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,16 +13,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1020.0" style="-fx-background-color: #744F88;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admission_help.homeviewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1020.0" style="-fx-background-color: #744F88;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admission_help.aboutcontroller">
     <children>
-        <ImageView fx:id="bannerimageview" fitHeight="300.0" fitWidth="500.0" layoutX="185.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../../../../../../images/ban8.png" />
-            </image>
-            <effect>
-                <DropShadow />
-            </effect>
-        </ImageView>
         <VBox layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="80.0" style="-fx-background-color: #452153;">
             <children>
                 <HBox alignment="CENTER" onMouseClicked="#dash" prefHeight="74.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
@@ -35,7 +29,7 @@
                         </ImageView>
                     </children>
                 </HBox>
-                <HBox alignment="CENTER" onMouseClicked="#home" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #744F88;">
+                <HBox alignment="CENTER" onMouseClicked="#home" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
                         <ImageView fx:id="homeimageview" fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -82,7 +76,7 @@
                             </effect>
                         </ImageView>
                     </children></HBox>
-                <HBox alignment="CENTER" layoutX="10.0" layoutY="384.0" onMouseClicked="#about" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="384.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #744F88;">
                     <children>
                         <ImageView fx:id="dstudentimageview" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -122,32 +116,65 @@
                 </HBox>
             </children>
         </VBox>
-        <Label contentDisplay="CENTER" layoutX="356.0" layoutY="35.0" opacity="0.94" text="ADMISSION HELP" textAlignment="CENTER" textFill="#2d2d37">
-            <font>
-                <Font name="Franklin Gothic Heavy Italic" size="36.0" />
-            </font>
-            <effect>
-                <Glow />
-            </effect>
-        </Label>
-        <Label layoutX="193.0" layoutY="104.0" prefHeight="48.0" prefWidth="289.0" text="Welcome" textFill="#9f8cd7">
-            <font>
-                <Font name="Serif Bold Italic" size="64.0" />
-            </font>
-        </Label>
-      <ImageView fx:id="banner2imageview" fitHeight="168.0" fitWidth="200.0" layoutX="707.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../images/ban9.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="banner3imageview" fitHeight="149.0" fitWidth="193.0" layoutX="695.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../images/ban1.png" />
-         </image>
-         <effect>
-            <ColorAdjust />
-         </effect>
-      </ImageView>
+      <Label layoutX="88.0" layoutY="22.0" prefHeight="35.0" prefWidth="908.0" text="The main purposes of this project to help the student. A student can get information about admission and check the ability . " textFill="#f8f3f3">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="99.0" layoutY="57.0" prefHeight="30.0" prefWidth="868.0" text="If you face with any problem or need any suggestions just give us a message or mail us by given account" textFill="#fcfcfc">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="yname" layoutX="99.0" layoutY="109.0" prefHeight="43.0" prefWidth="399.0" promptText="Your name" />
+      <TextArea fx:id="ymessage" layoutX="99.0" layoutY="175.0" prefHeight="161.0" prefWidth="399.0" promptText="Write your message here" />
+      <Button layoutX="99.0" layoutY="361.0" mnemonicParsing="false" onAction="#send" prefHeight="31.0" prefWidth="133.0" text="Send Message" />
+      <Label fx:id="message" layoutX="264.0" layoutY="361.0" onMouseClicked="#about" prefHeight="35.0" prefWidth="232.0" textFill="#f8f7f7" />
+      <Label layoutX="684.0" layoutY="111.0" prefHeight="30.0" prefWidth="127.0" style="-fx-background-color: #236788;" text="Credit :" textFill="#f2ecec">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="684.0" layoutY="152.0" prefHeight="35.0" prefWidth="275.0" text="Saima Akter" textFill="#f2ecec">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="684.0" layoutY="187.0" prefHeight="35.0" prefWidth="275.0" text="Dipto Shaha" textFill="#f2ecec">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="684.0" layoutY="222.0" prefHeight="35.0" prefWidth="275.0" text="Jawad Ul Islam Abir" textFill="#f2ecec">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="684.0" layoutY="301.0" prefHeight="35.0" prefWidth="187.0" style="-fx-background-color: #236788;" text="Gmail Account :" textFill="#f2ecec">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="684.0" layoutY="344.0" prefHeight="35.0" prefWidth="275.0" text="mjiabir12007@gmail.com" textFill="#f2ecec">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="684.0" layoutY="379.0" prefHeight="35.0" prefWidth="275.0" text="diptoshaha2635@gmail.com" textFill="#f2ecec">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="684.0" layoutY="414.0" prefHeight="35.0" prefWidth="275.0" text="saimaakter4046@gmail.com" textFill="#f2ecec">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="516.0" prefHeight="35.0" prefWidth="399.0" text="Good luck to you all" textFill="#f2ecec">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
 
     </children>
 </AnchorPane>

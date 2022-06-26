@@ -2,6 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.effect.DropShadow?>
@@ -15,14 +17,6 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1020.0" style="-fx-background-color: #744F88;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admission_help.eligibilityController">
     <children>
-        <ImageView fx:id="bannerimageview" fitWidth="600.0" layoutX="202.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../../../../../../images/List.png" />
-            </image>
-            <effect>
-                <DropShadow />
-            </effect>
-        </ImageView>
         <VBox layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="80.0" style="-fx-background-color: #452153;">
             <children>
                 <HBox alignment="CENTER" onMouseClicked="#dash" prefHeight="74.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
@@ -49,7 +43,7 @@
                         <DropShadow blurType="TWO_PASS_BOX" />
                     </effect>
                 </HBox>
-                <HBox alignment="CENTER" onMouseClicked="#student" layoutX="10.0" layoutY="84.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="84.0" onMouseClicked="#student" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
                         <ImageView fx:id="studentimageview" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -61,7 +55,7 @@
                         </ImageView>
                     </children>
                 </HBox>
-                <HBox alignment="CENTER" onMouseClicked="#university" layoutX="10.0" layoutY="204.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="204.0" onMouseClicked="#university" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
                         <ImageView fx:id="universityimageview" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -73,7 +67,7 @@
                         </ImageView>
                     </children>
                 </HBox>
-                <HBox alignment="CENTER" onMouseClicked="#euniversity" layoutX="10.0" layoutY="264.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #744F88;">
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="264.0" onMouseClicked="#euniversity" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #744F88;">
                     <children>
                         <ImageView fx:id="euniversityimageview" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -85,7 +79,7 @@
                         </ImageView>
                     </children>
                 </HBox>
-                <HBox alignment="CENTER" layoutX="10.0" layoutY="384.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="384.0" onMouseClicked="#about" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
                         <ImageView fx:id="dstudentimageview" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -97,11 +91,11 @@
                         </ImageView>
                     </children>
                 </HBox>
-                <HBox alignment="CENTER" layoutX="10.0" layoutY="324.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="324.0" onMouseClicked="#time" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
                         <ImageView fx:id="questionsimageview" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../../../../../images/Read.png" />
+                                <Image url="@../../../../../../images/Alarm.png" />
                             </image>
                             <effect>
                                 <ColorAdjust brightness="1.0" />
@@ -127,7 +121,7 @@
                 </HBox>
             </children>
         </VBox>
-        <Label contentDisplay="CENTER" layoutX="401.0" opacity="0.94" prefHeight="54.0" prefWidth="251.0" text="    Eligibility" textAlignment="CENTER" textFill="#2d2d37">
+        <Label contentDisplay="CENTER" layoutX="306.0" opacity="0.94" prefHeight="30.0" prefWidth="251.0" text="    Eligibility" textAlignment="CENTER" textFill="#2d2d37">
             <font>
                 <Font name="Leelawadee UI Bold" size="36.0" />
             </font>
@@ -135,14 +129,31 @@
                 <Glow />
             </effect>
         </Label>
-        <TextField layoutX="202.0" layoutY="348.0" prefHeight="26.0" prefWidth="600.0" text="Enter Your Result And Steam ( HSC_GPA,HSC_Steam,SSC_GPA,SSC_Steam):" />
-        <TextField fx:id="myinputtext" layoutX="202.0" layoutY="379.0" prefHeight="26.0" prefWidth="472.0" />
-        <Button fx:id="myButton" defaultButton="true" layoutX="687.0" layoutY="379.0" mnemonicParsing="false" onAction="#submit" prefHeight="26.0" prefWidth="114.0" text="Submit" textFill="#45747d" />
+        <TextField layoutX="158.0" layoutY="355.0" prefHeight="31.0" prefWidth="392.0" text="Enter Your Result And Steam ( HSC_GPA,HSC_Steam,SSC_GPA,SSC_Steam):" />
+        <TextField fx:id="myinputtext" layoutX="564.0" layoutY="355.0" prefHeight="31.0" prefWidth="399.0" />
+        <Button fx:id="myButton" defaultButton="true" layoutX="849.0" layoutY="402.0" mnemonicParsing="false" onAction="#submit" prefHeight="26.0" prefWidth="114.0" text="Submit" textFill="#45747d" />
         <Label text="Label" />
-        <Label fx:id="outputtext" layoutX="203.0" layoutY="417.0" prefHeight="158.0" prefWidth="600.0" textFill="#fffdfd">
+        <Label fx:id="outputtext" layoutX="158.0" layoutY="402.0" prefHeight="174.0" prefWidth="668.0" textFill="#fffdfd">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font></Label>
+      <TableView fx:id="tableView" layoutX="158.0" layoutY="54.0" prefHeight="296.0" prefWidth="797.0">
+         <columns>
+            <TableColumn id="idColumn" fx:id="idc" editable="false" prefWidth="63.0" text="ID" />
+            <TableColumn id="FNameColumn" fx:id="universityc" prefWidth="162.0" text="University Name" />
+            <TableColumn minWidth="0.0" prefWidth="0.0" text="Last Name" />
+            <TableColumn id="LNameColumn" fx:id="unitc" prefWidth="93.0" text="UNIT" />
+            <TableColumn id="typeColumn" fx:id="hscgpac" minWidth="0.0" prefWidth="117.0" text="HSC GPA" />
+            <TableColumn id="GenderColumn" fx:id="hscsteamc" prefWidth="119.0" text="HSC STEAM" />
+            <TableColumn id="dobColumn" fx:id="sscgpac" prefWidth="94.0" text="SSC GPA" />
+            <TableColumn id="addressColumn" fx:id="sscsteamc" prefWidth="148.0" text="SSC STEAM" />
+         </columns>
+      </TableView>
+      <Button layoutX="817.0" layoutY="11.0" mnemonicParsing="false" onAction="#loaddata" prefHeight="31.0" prefWidth="131.0" text="Load">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
 
     </children>
 </AnchorPane>

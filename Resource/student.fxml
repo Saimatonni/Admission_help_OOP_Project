@@ -74,7 +74,7 @@
                             </effect>
                         </ImageView>
                     </children></HBox>
-                <HBox alignment="CENTER" layoutX="10.0" layoutY="384.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="384.0" onMouseClicked="#about" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
                         <ImageView fx:id="dstudentimageview" fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -88,11 +88,11 @@
                     <effect>
                         <DropShadow blurType="TWO_PASS_BOX" />
                     </effect></HBox>
-                <HBox alignment="CENTER" layoutX="10.0" layoutY="324.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="324.0" onMouseClicked="#time" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
                         <ImageView fx:id="questionsimageview" fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../../../../../images/Read.png" />
+                                <Image url="@../../../../../../images/Alarm.png" />
                             </image>
                             <effect>
                                 <ColorAdjust brightness="1.0" />

@@ -65,12 +65,17 @@
             <Image url="@../../../../../../images/admin.png" />
          </image>
       </ImageView>
-      <Button layoutX="283.0" layoutY="304.0" mnemonicParsing="false" onMouseClicked="#add" prefHeight="73.0" prefWidth="187.0" style="-fx-background-color: #DD5043; -fx-background-radius: 25;" text="ADD UNIVERSITY">
+      <Button layoutX="265.0" layoutY="243.0" mnemonicParsing="false" onMouseClicked="#add" prefHeight="73.0" prefWidth="187.0" style="-fx-background-color: #DD5043; -fx-background-radius: 25;" text="ADD UNIVERSITY">
          <font>
             <Font name="Britannic Bold" size="18.0" />
          </font>
       </Button>
-      <Button layoutX="639.0" layoutY="304.0" mnemonicParsing="false" onMouseClicked="#show" prefHeight="73.0" prefWidth="200.0" style="-fx-background-color: #DD5043; -fx-background-radius: 25;" text="SHOW UNIVERSITY">
+      <Button layoutX="622.0" layoutY="243.0" mnemonicParsing="false" onMouseClicked="#show" prefHeight="73.0" prefWidth="200.0" style="-fx-background-color: #DD5043; -fx-background-radius: 25;" text="SHOW UNIVERSITY">
+         <font>
+            <Font name="Britannic Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="452.0" layoutY="369.0" mnemonicParsing="false" onMouseClicked="#addtime" prefHeight="73.0" prefWidth="187.0" style="-fx-background-color: #DD5043; -fx-background-radius: 25;" text="ADD TIME">
          <font>
             <Font name="Britannic Bold" size="18.0" />
          </font>

@@ -1,26 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.effect.ColorAdjust?>
 <?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1020.0" style="-fx-background-color: #744F88;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admission_help.homeviewController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1020.0" style="-fx-background-color: #744F88;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.admission_help.timecontroller">
     <children>
-        <ImageView fx:id="bannerimageview" fitHeight="300.0" fitWidth="500.0" layoutX="185.0" layoutY="208.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-                <Image url="@../../../../../../images/ban8.png" />
-            </image>
-            <effect>
-                <DropShadow />
-            </effect>
-        </ImageView>
         <VBox layoutY="-2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="80.0" style="-fx-background-color: #452153;">
             <children>
                 <HBox alignment="CENTER" onMouseClicked="#dash" prefHeight="74.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
@@ -35,7 +27,7 @@
                         </ImageView>
                     </children>
                 </HBox>
-                <HBox alignment="CENTER" onMouseClicked="#home" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #744F88;">
+                <HBox alignment="CENTER" onMouseClicked="#home" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
                         <ImageView fx:id="homeimageview" fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -43,9 +35,6 @@
                             </image>
                         </ImageView>
                     </children>
-                    <effect>
-                        <DropShadow blurType="TWO_PASS_BOX" />
-                    </effect>
                 </HBox>
                 <HBox alignment="CENTER" layoutX="10.0" layoutY="84.0" onMouseClicked="#student" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
@@ -73,18 +62,18 @@
                 </HBox>
                 <HBox alignment="CENTER" layoutX="10.0" layoutY="264.0" onMouseClicked="#euniversity" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
-                        <ImageView fx:id="euniversityimageview" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="euniversityimageview" fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../../images/Search.png" />
                             </image>
                             <effect>
-                                <ColorAdjust brightness="1.0" />
+                                <ColorAdjust brightness="1.0" contrast="1.0" />
                             </effect>
                         </ImageView>
                     </children></HBox>
                 <HBox alignment="CENTER" layoutX="10.0" layoutY="384.0" onMouseClicked="#about" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
-                        <ImageView fx:id="dstudentimageview" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="dstudentimageview" fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../../images/Chat.png" />
                             </image>
@@ -92,10 +81,13 @@
                                 <ColorAdjust brightness="1.0" />
                             </effect>
                         </ImageView>
-                    </children></HBox>
-                <HBox alignment="CENTER" layoutX="10.0" layoutY="324.0" onMouseClicked="#time" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                    </children>
+                    <effect>
+                        <DropShadow blurType="TWO_PASS_BOX" />
+                    </effect></HBox>
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="324.0" onMouseClicked="#time" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #744F88;">
                     <children>
-                        <ImageView fx:id="questionsimageview" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="questionsimageview" fitHeight="18.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                             <image>
                                 <Image url="@../../../../../../images/Alarm.png" />
                             </image>
@@ -122,32 +114,14 @@
                 </HBox>
             </children>
         </VBox>
-        <Label contentDisplay="CENTER" layoutX="356.0" layoutY="35.0" opacity="0.94" text="ADMISSION HELP" textAlignment="CENTER" textFill="#2d2d37">
-            <font>
-                <Font name="Franklin Gothic Heavy Italic" size="36.0" />
-            </font>
-            <effect>
-                <Glow />
-            </effect>
-        </Label>
-        <Label layoutX="193.0" layoutY="104.0" prefHeight="48.0" prefWidth="289.0" text="Welcome" textFill="#9f8cd7">
-            <font>
-                <Font name="Serif Bold Italic" size="64.0" />
-            </font>
-        </Label>
-      <ImageView fx:id="banner2imageview" fitHeight="168.0" fitWidth="200.0" layoutX="707.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../images/ban9.png" />
-         </image>
-      </ImageView>
-      <ImageView fx:id="banner3imageview" fitHeight="149.0" fitWidth="193.0" layoutX="695.0" layoutY="372.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../../../../images/ban1.png" />
-         </image>
-         <effect>
-            <ColorAdjust />
-         </effect>
-      </ImageView>
-
+        <TableView fx:id="tableView" layoutX="86.0" layoutY="40.0" prefHeight="547.0" prefWidth="934.0">
+            <columns>
+                <TableColumn fx:id="id" editable="false" prefWidth="94.0" text="ID" />
+                <TableColumn fx:id="uname" prefWidth="356.0" text="University Name" />
+                <TableColumn fx:id="date" prefWidth="237.0" text="Exam Date" />
+            <TableColumn fx:id="date1" prefWidth="238.0" text="Day Left" />
+            </columns>
+        </TableView>
+      <Button layoutX="883.0" layoutY="5.0" mnemonicParsing="false" onAction="#loaddata" prefHeight="35.0" prefWidth="135.0" text="Refresh" />
     </children>
 </AnchorPane>

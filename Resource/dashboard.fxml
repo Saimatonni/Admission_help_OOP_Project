@@ -83,7 +83,7 @@
                             </effect>
                         </ImageView>
                     </children></HBox>
-                <HBox alignment="CENTER" layoutX="10.0" layoutY="384.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="384.0" onMouseClicked="#about" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
                         <ImageView fx:id="dstudentimageview" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -94,11 +94,11 @@
                             </effect>
                         </ImageView>
                     </children></HBox>
-                <HBox alignment="CENTER" layoutX="10.0" layoutY="324.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="324.0" onMouseClicked="#time" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
                         <ImageView fx:id="questionsimageview" fitHeight="20.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../../../../../images/Read.png" />
+                                <Image url="@../../../../../../images/Alarm.png" />
                             </image>
                             <effect>
                                 <ColorAdjust brightness="1.0" />
@@ -131,7 +131,7 @@
                 <Glow />
             </effect>
         </Label>
-        <HBox id="fd_homei" onMouseClicked="#home" alignment="CENTER_LEFT" layoutX="172.0" layoutY="159.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: #452153;">
+        <HBox id="fd_homei" alignment="CENTER_LEFT" layoutX="172.0" layoutY="159.0" onMouseClicked="#home" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: #452153;">
             <children>
                 <HBox alignment="CENTER" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
@@ -155,7 +155,7 @@
                 <DropShadow blurType="TWO_PASS_BOX" />
             </effect>
         </HBox>
-        <HBox alignment="CENTER_LEFT" onMouseClicked="#student" layoutX="686.0" layoutY="159.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: #452153;">
+        <HBox alignment="CENTER_LEFT" layoutX="686.0" layoutY="159.0" onMouseClicked="#student" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: #452153;">
             <children>
                 <HBox alignment="CENTER" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
@@ -182,7 +182,7 @@
                 <DropShadow blurType="TWO_PASS_BOX" />
             </effect>
         </HBox>
-        <HBox alignment="CENTER_LEFT" onMouseClicked="#university" layoutX="427.0" layoutY="159.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: #452153;">
+        <HBox alignment="CENTER_LEFT" layoutX="427.0" layoutY="159.0" onMouseClicked="#university" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: #452153;">
             <children>
                 <HBox alignment="CENTER" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
@@ -244,7 +244,7 @@
                 <DropShadow />
             </effect>
         </HBox>
-        <HBox alignment="CENTER_LEFT" onMouseClicked="#euniversity" layoutX="172.0" layoutY="298.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: #452153;">
+        <HBox alignment="CENTER_LEFT" layoutX="172.0" layoutY="298.0" onMouseClicked="#euniversity" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: #452153;">
             <children>
                 <HBox alignment="CENTER" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
@@ -271,7 +271,7 @@
                 <DropShadow blurType="TWO_PASS_BOX" />
             </effect>
         </HBox>
-        <HBox alignment="CENTER_LEFT" layoutX="427.0" layoutY="298.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: #452153;">
+        <HBox alignment="CENTER_LEFT" layoutX="427.0" layoutY="298.0" onMouseClicked="#about" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: #452153;">
             <children>
                 <HBox alignment="CENTER" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
@@ -298,13 +298,13 @@
                 <DropShadow blurType="TWO_PASS_BOX" />
             </effect>
         </HBox>
-        <HBox alignment="CENTER_LEFT" layoutX="686.0" layoutY="298.0" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: #452153;">
+        <HBox alignment="CENTER_LEFT" layoutX="686.0" layoutY="298.0" onMouseClicked="#time" prefHeight="100.0" prefWidth="240.0" style="-fx-background-color: #452153;">
             <children>
                 <HBox alignment="CENTER" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;">
                     <children>
                         <ImageView fx:id="questionsimageview2" fitHeight="26.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
                             <image>
-                                <Image url="@../../../../../../images/Read.png" />
+                                <Image url="@../../../../../../images/Alarm.png" />
                             </image>
                             <effect>
                                 <ColorAdjust brightness="1.0" />
@@ -312,9 +312,9 @@
                         </ImageView>
                     </children>
                 </HBox>
-                <Label prefHeight="36.0" prefWidth="153.0" text="Previous Questions" textFill="WHITE">
+                <Label prefHeight="36.0" prefWidth="153.0" text="Exam Date" textFill="WHITE">
                     <font>
-                        <Font size="14.0" />
+                        <Font size="24.0" />
                     </font>
                     <padding>
                         <Insets left="5.0" />
