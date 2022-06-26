@@ -59,4 +59,12 @@ public class adminController implements Initializable {
         stage.setScene(new Scene(root));
 
     }
+    @FXML
+    void addtime(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("addtime.fxml"));
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        stage.setScene(new Scene(root));
+
+    }
 }

@@ -65,7 +65,7 @@ public class homeviewController implements Initializable {
         Image euniversityImage = new Image(euniversityFile.toURI().toString());
         euniversityimageview.setImage(euniversityImage);
 
-        File questionsFile = new File("images/Read.png");
+        File questionsFile = new File("images/Alarm.png");
         Image questionsImage = new Image(questionsFile.toURI().toString());
         questionsimageview.setImage(questionsImage);
 
@@ -151,5 +151,30 @@ public class homeviewController implements Initializable {
         stage.setScene(new Scene(root));
 
     }
+
+    @FXML
+    public void time(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("time.fxml"));
+
+        Node node = (Node) event.getSource();
+
+        Stage stage = (Stage) node.getScene().getWindow();
+
+        stage.setScene(new Scene(root));
+
+    }
+
+    @FXML
+    public void about(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("about.fxml"));
+
+        Node node = (Node) event.getSource();
+
+        Stage stage = (Stage) node.getScene().getWindow();
+
+        stage.setScene(new Scene(root));
+
+    }
+
 
 }

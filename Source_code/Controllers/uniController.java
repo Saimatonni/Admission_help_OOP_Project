@@ -51,6 +51,7 @@ public class uniController {
         String hscsteam = hsc_steam.getText();
         String sscgpa = ssc_gpa.getText();
         String sscsteam = ssc_steam.getText();
+        
         String insertFields = "INSERT INTO login.university_list (uni_name, unit, hsc_gpa, hsc_steam, ssc_gpa,ssc_steam) VALUES ('";
         String insertValues = uname + "','" + Unit + "','" + hscgpa + "','" + hscsteam +  "','" + sscgpa + "','" + sscsteam + "')";
         String insertToRegister = insertFields + insertValues;

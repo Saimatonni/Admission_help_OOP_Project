@@ -1,6 +1,9 @@
 package com.example.admission_help;
 
-import com.example.admission_help.Student.student;
+import com.example.admission_help.database.dbconnect;
+import com.example.admission_help.universityInfo.time;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,46 +11,32 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
-public class studentController implements Initializable {
-    @FXML
-    private TextField nametextfield;
-    @FXML
-    private TextField sscgrouptextfield;
-    @FXML
-    private TextField sscgpatextfield;
-    @FXML
-    private TextField hscgpatextfield;
-    @FXML
-    private TextField divisiontextfield;
-    @FXML
-    private TextField hscgrouptextfield;
-    @FXML
-    private Label namelabel;
-    @FXML
-    private Label sscgrouplabel;
-    @FXML
-    private Label sscgpalabel;
-    @FXML
-    private Label hscgpalabel;
-    @FXML
-    private Label divisionlabel;
-    @FXML
-    private Label hscgrouplabel;
+public class timecontroller implements Initializable {
 
+    @FXML
+    private TableView<time> tableView;
+    @FXML
+    private TableColumn<time,Integer> id;
+    @FXML
+    private TableColumn<time,String> uname;
+    @FXML
+    private TableColumn<time,String> date;
     @FXML
     private ImageView studentimageview;
     @FXML
@@ -64,10 +53,7 @@ public class studentController implements Initializable {
     private ImageView questionsimageview;
     @FXML
     private ImageView logoutimageview;
-    @FXML
-    private ImageView logoutimageview2;
-    @FXML
-    private ImageView profileimageview;
+
 
 
     @Override
@@ -103,84 +89,44 @@ public class studentController implements Initializable {
         File logoutFile = new File("images/Circles.png");
         Image logoutImage = new Image(logoutFile.toURI().toString());
         logoutimageview.setImage(logoutImage);
+        loaddata();
 
-        File logoutFile2 = new File("images/Circles.png");
-        Image logoutImage2 = new Image(logoutFile2.toURI().toString());
-        logoutimageview2.setImage(logoutImage2);
-        File profilefile = new File("images/prof2.png");
-        Image profileimage = new Image(profilefile.toURI().toString());
-        profileimageview.setImage(profileimage);
 
     }
-    public void addStudentonAction(ActionEvent event) throws IOException {
+    @FXML
+    public void loaddata() {
 
-        student std = new student();
-        String name = nametextfield.getText();
-        std.setName(name);
-        String sscgroup = sscgrouptextfield.getText();
-        std.setsscGroup(sscgroup);
-        String ssc_gpa = sscgpatextfield.getText();
-        std.setSsc_gpa(ssc_gpa);
-        String hsc_gpa = hscgpatextfield.getText();
-        std.setHsc_gpa(hsc_gpa);
-        String division = divisiontextfield.getText();
-        std.setDivision(division);
-        String hscgroup = hscgrouptextfield.getText();
-        std.sethscGroup(hscgroup);
-        // studenttextarea.appendText(std.toString() + "\n");
-        FileWriter fw = new FileWriter("Write.txt");
-        BufferedWriter write = new BufferedWriter(fw);
-        try {
-            write.write(name);
-            write.newLine();
-            write.write(sscgroup);
-            write.newLine();
-            write.write(hscgroup);
-            write.newLine();
-            write.write(ssc_gpa);
-            write.newLine();
-            write.write(hsc_gpa);
-            write.newLine();
-            write.write(division);
-            write.newLine();
-            write.write("\0");
+        id.setCellValueFactory(new PropertyValueFactory<time,Integer>("id"));
+        uname.setCellValueFactory(new PropertyValueFactory<time,String>("uname"));
+        date.setCellValueFactory(new PropertyValueFactory<time,String>("edate"));
 
-            write.close();
-        } catch (IOException Ex) {
-            System.out.println(Ex.getMessage());
-        }
-        studentdata();
+
+
+        tableView.setItems(gettime());
     }
-    public  void  studentdata(){
-        String[] str = new String[10];
+
+    public ObservableList<time> gettime(){
+        ObservableList<time> time= FXCollections.observableArrayList();
         try {
-            FileReader fr = new FileReader("Write.txt");
-            BufferedReader read = new BufferedReader(fr);
-            String line = read.readLine();
-            int i = 0;
-            while (line != null) {
-                System.out.println(line);
-                str[i++] = line;
-                line = read.readLine();
+           /* Connection connection = sqliteConnection.dbConnector();
+            Statement statement = connection.createStatement();*/
+            dbconnect connectnow = new dbconnect();
+            Connection connectdb = connectnow.getConnection();
+            Statement statement = connectdb.createStatement();
+            ResultSet resultSet = statement.executeQuery("select * from uni_time");
+            while (resultSet.next()) {
+                time.add(new time(resultSet.getInt("idtime"), resultSet.getString("uniname"), resultSet.getString("time")));
             }
-            read.close();
-        } catch (IOException Ex) {
-            System.out.println(Ex.getMessage());
-        }
-        /*namelabel.setText(std.toStringN());
-        sscgrouplabel.setText(std.toStringSSCG());
-        sscgpalabel.setText(std.toStringSSC2());
-        hscgpalabel.setText(std.toStringHSC2());
-        divisionlabel.setText(std.toStringD());
-        hscgrouplabel.setText(std.toStringHSCG());*/
-        namelabel.setText(str[0]);
-        sscgrouplabel.setText(str[1]);
-        hscgpalabel.setText(str[2]);
-        sscgpalabel.setText(str[3]);
-        hscgrouplabel.setText(str[4]);
-        divisionlabel.setText(str[5]);
-    }
 
+
+        } catch (SQLException e) {
+            System.err.println("Cannot Connect to Database");
+        }
+
+
+
+        return time;
+    }
     @FXML
     public void dash(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("dashboard.fxml"));
@@ -216,17 +162,7 @@ public class studentController implements Initializable {
 
     }
 
-    @FXML
-    public void logout(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
 
-        Node node = (Node) event.getSource();
-
-        Stage stage = (Stage) node.getScene().getWindow();
-
-        stage.setScene(new Scene(root));
-
-    }
     @FXML
     public void euniversity(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("Eligibility.fxml"));
