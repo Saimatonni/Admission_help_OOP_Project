@@ -15,9 +15,6 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-import java.io.IOException;
-import java.io.FileWriter;
-import java.io.BufferedWriter;
 
 import java.io.*;
 import java.net.URL;
@@ -96,7 +93,7 @@ public class studentController implements Initializable {
         Image euniversityImage = new Image(euniversityFile.toURI().toString());
         euniversityimageview.setImage(euniversityImage);
 
-        File questionsFile = new File("images/Read.png");
+        File questionsFile = new File("images/Alarm.png");
         Image questionsImage = new Image(questionsFile.toURI().toString());
         questionsimageview.setImage(questionsImage);
 
@@ -116,7 +113,6 @@ public class studentController implements Initializable {
         profileimageview.setImage(profileimage);
 
     }
-    
     public void addStudentonAction(ActionEvent event) throws IOException {
         student std = new student();
         String name = nametextfield.getText();
@@ -155,7 +151,7 @@ public class studentController implements Initializable {
         }
         studentdata();
     }
-     public  void  studentdata(){
+    public  void  studentdata(){
         String[] str = new String[10];
         try {
             FileReader fr = new FileReader("Write.txt");
@@ -184,8 +180,7 @@ public class studentController implements Initializable {
         hscgrouplabel.setText(str[4]);
         divisionlabel.setText(str[5]);
 
-     }
-
+    }
 
     @FXML
     public void dash(MouseEvent event) throws IOException {
@@ -247,6 +242,17 @@ public class studentController implements Initializable {
     @FXML
     public void student(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("student.fxml"));
+
+        Node node = (Node) event.getSource();
+
+        Stage stage = (Stage) node.getScene().getWindow();
+
+        stage.setScene(new Scene(root));
+
+    }
+    @FXML
+    public void time(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("time.fxml"));
 
         Node node = (Node) event.getSource();
 
