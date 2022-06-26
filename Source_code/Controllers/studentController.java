@@ -15,9 +15,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
-
-import java.io.File;
 import java.io.IOException;
+import java.io.FileWriter;
+import java.io.BufferedWriter;
+
+import java.io.*;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.Statement;
@@ -73,6 +75,7 @@ public class studentController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        studentdata();
         File studentFile = new File("images/Male.png");
         Image studentImage = new Image(studentFile.toURI().toString());
         studentimageview.setImage(studentImage);
@@ -113,8 +116,8 @@ public class studentController implements Initializable {
         profileimageview.setImage(profileimage);
 
     }
+    
     public void addStudentonAction(ActionEvent event) throws IOException {
-
         student std = new student();
         String name = nametextfield.getText();
         std.setName(name);
@@ -129,13 +132,61 @@ public class studentController implements Initializable {
         String hscgroup = hscgrouptextfield.getText();
         std.sethscGroup(hscgroup);
         // studenttextarea.appendText(std.toString() + "\n");
-        namelabel.setText(std.toStringN());
+        FileWriter fw = new FileWriter("Write.txt");
+        BufferedWriter write = new BufferedWriter(fw);
+        try {
+            write.write(name);
+            write.newLine();
+            write.write(sscgroup);
+            write.newLine();
+            write.write(hscgroup);
+            write.newLine();
+            write.write(ssc_gpa);
+            write.newLine();
+            write.write(hsc_gpa);
+            write.newLine();
+            write.write(division);
+            write.newLine();
+            write.write("\0");
+
+            write.close();
+        } catch (IOException Ex) {
+            System.out.println(Ex.getMessage());
+        }
+        studentdata();
+    }
+     public  void  studentdata(){
+        String[] str = new String[10];
+        try {
+            FileReader fr = new FileReader("Write.txt");
+            BufferedReader read = new BufferedReader(fr);
+            String line = read.readLine();
+            int i = 0;
+            while (line != null) {
+                System.out.println(line);
+                str[i++] = line;
+                line = read.readLine();
+            }
+            read.close();
+        } catch (IOException Ex) {
+            System.out.println(Ex.getMessage());
+        }
+        /*namelabel.setText(std.toStringN());
         sscgrouplabel.setText(std.toStringSSCG());
         sscgpalabel.setText(std.toStringSSC2());
         hscgpalabel.setText(std.toStringHSC2());
         divisionlabel.setText(std.toStringD());
-        hscgrouplabel.setText(std.toStringHSCG());
-    }
+        hscgrouplabel.setText(std.toStringHSCG());*/
+        namelabel.setText(str[0]);
+        sscgrouplabel.setText(str[1]);
+        hscgpalabel.setText(str[2]);
+        sscgpalabel.setText(str[3]);
+        hscgrouplabel.setText(str[4]);
+        divisionlabel.setText(str[5]);
+        System.out.println(std.getsscGroup()+std.gethscGroup());
+
+     }
+
 
     @FXML
     public void dash(MouseEvent event) throws IOException {
