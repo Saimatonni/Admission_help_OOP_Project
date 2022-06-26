@@ -72,6 +72,7 @@ public class studentController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        studentdata();
         File studentFile = new File("images/Male.png");
         Image studentImage = new Image(studentFile.toURI().toString());
         studentimageview.setImage(studentImage);
@@ -113,7 +114,6 @@ public class studentController implements Initializable {
 
     }
     public void addStudentonAction(ActionEvent event) throws IOException {
-
         student std = new student();
         String name = nametextfield.getText();
         std.setName(name);
@@ -179,6 +179,7 @@ public class studentController implements Initializable {
         sscgpalabel.setText(str[3]);
         hscgrouplabel.setText(str[4]);
         divisionlabel.setText(str[5]);
+
     }
 
     @FXML
@@ -252,17 +253,6 @@ public class studentController implements Initializable {
     @FXML
     public void time(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("time.fxml"));
-
-        Node node = (Node) event.getSource();
-
-        Stage stage = (Stage) node.getScene().getWindow();
-
-        stage.setScene(new Scene(root));
-
-    }
-    @FXML
-    public void about(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("about.fxml"));
 
         Node node = (Node) event.getSource();
 
