@@ -113,6 +113,25 @@ public class eligibilityController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        String[] str = new String[10];
+        try {
+            FileReader fr = new FileReader("Write.txt");
+            BufferedReader read = new BufferedReader(fr);
+            String line = read.readLine();
+            int i = 0;
+            while (line != null) {
+                System.out.println(line);
+                str[i++] = line;
+                line = read.readLine();
+            }
+            read.close();
+        } catch (IOException Ex) {
+            System.out.println(Ex.getMessage());
+        }
+        myinputtext.setText(str[4]+","+str[2]+","+str[3]+","+str[1]);
+        submission();
+
         File studentFile = new File("images/Male.png");
         Image studentImage = new Image(studentFile.toURI().toString());
         studentimageview.setImage(studentImage);
@@ -147,8 +166,10 @@ public class eligibilityController implements Initializable {
         loaddata();
     }
     String in;
-
     public void submit(ActionEvent actionEvent) {
+        submission();
+    }
+    public void submission(){
         in = myinputtext.getText();
         Eligibility_check obj = new Eligibility_check();
         String ans = obj.Inputcut(in);
@@ -214,17 +235,6 @@ public class eligibilityController implements Initializable {
     @FXML
     public void time(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("time.fxml"));
-
-        Node node = (Node) event.getSource();
-
-        Stage stage = (Stage) node.getScene().getWindow();
-
-        stage.setScene(new Scene(root));
-
-    }
-    @FXML
-    public void about(MouseEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("about.fxml"));
 
         Node node = (Node) event.getSource();
 
