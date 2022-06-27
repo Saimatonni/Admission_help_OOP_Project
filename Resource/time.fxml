@@ -97,7 +97,7 @@
                         </ImageView>
                     </children></HBox>
                 <HBox alignment="CENTER" layoutX="10.0" layoutY="144.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;" />
-                <HBox alignment="CENTER" layoutX="10.0" layoutY="444.0" prefHeight="95.0" prefWidth="80.0" style="-fx-background-color: #DD5043;">
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="444.0" onMouseClicked="#logout" prefHeight="95.0" prefWidth="80.0" style="-fx-background-color: #DD5043;">
                     <children>
                         <ImageView fx:id="logoutimageview" fitHeight="35.0" fitWidth="30.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -119,7 +119,7 @@
                 <TableColumn fx:id="id" editable="false" prefWidth="94.0" text="ID" />
                 <TableColumn fx:id="uname" prefWidth="356.0" text="University Name" />
                 <TableColumn fx:id="date" prefWidth="237.0" text="Exam Date" />
-            <TableColumn fx:id="date1" prefWidth="238.0" text="Day Left" />
+            <TableColumn fx:id="leftday" prefWidth="238.0" text="Day Left" />
             </columns>
         </TableView>
       <Button layoutX="883.0" layoutY="5.0" mnemonicParsing="false" onAction="#loaddata" prefHeight="35.0" prefWidth="135.0" text="Refresh" />

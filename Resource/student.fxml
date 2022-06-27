@@ -100,7 +100,7 @@
                         </ImageView>
                     </children></HBox>
                 <HBox alignment="CENTER" layoutX="10.0" layoutY="144.0" prefHeight="60.0" prefWidth="80.0" style="-fx-background-color: #2D2D37;" />
-                <HBox alignment="CENTER" layoutX="10.0" layoutY="444.0" prefHeight="95.0" prefWidth="80.0" style="-fx-background-color: #DD5043;">
+                <HBox alignment="CENTER" layoutX="10.0" layoutY="444.0" onMouseClicked="#logout" prefHeight="95.0" prefWidth="80.0" style="-fx-background-color: #DD5043;">
                     <children>
                         <ImageView fx:id="logoutimageview" fitHeight="35.0" fitWidth="30.0" focusTraversable="true" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -178,11 +178,11 @@
             <Font name="Britannic Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="nametextfield" layoutX="116.0" layoutY="103.0" prefHeight="21.0" prefWidth="149.0" style="-fx-background-radius: 5;">
+      <TextField fx:id="nametextfield" layoutX="116.0" layoutY="103.0" prefHeight="21.0" prefWidth="175.0" style="-fx-background-radius: 5;">
          <padding>
             <Insets left="7.0" />
          </padding></TextField>
-      <TextField fx:id="sscgpatextfield" layoutX="121.0" layoutY="307.0" prefHeight="3.0" prefWidth="157.0" style="-fx-background-radius: 5;">
+      <TextField fx:id="sscgpatextfield" layoutX="121.0" layoutY="307.0" prefHeight="21.0" prefWidth="175.0" style="-fx-background-radius: 5;">
          <padding>
             <Insets left="7.0" />
          </padding></TextField>
@@ -196,11 +196,14 @@
             <Font name="Britannic Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="sscgrouptextfield" layoutX="121.0" layoutY="165.0" prefHeight="21.0" prefWidth="149.0" style="t: 5;">
+      <TextField fx:id="sscgrouptextfield" layoutX="121.0" layoutY="165.0" prefHeight="21.0" prefWidth="175.0" promptText="Science/Arts/Commerce" style="t: 5;">
          <padding>
             <Insets left="7.0" />
-         </padding></TextField>
-      <TextField fx:id="hscgpatextfield" layoutX="121.0" layoutY="377.0" prefHeight="3.0" prefWidth="157.0" style="-fx-background-radius: 5;">
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <TextField fx:id="hscgpatextfield" layoutX="121.0" layoutY="377.0" prefHeight="21.0" prefWidth="175.0" style="-fx-background-radius: 5;">
          <padding>
             <Insets left="7.0" />
          </padding></TextField>
@@ -209,16 +212,19 @@
             <Font name="Britannic Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="hscgrouptextfield" layoutX="121.0" layoutY="240.0" prefHeight="3.0" prefWidth="149.0" style="-fx-background-radius: 5;">
+      <TextField fx:id="hscgrouptextfield" layoutX="121.0" layoutY="240.0" prefHeight="19.0" prefWidth="175.0" promptText="Science/Arts/Commerce" style="-fx-background-radius: 5;">
          <padding>
             <Insets left="7.0" />
-         </padding></TextField>
+         </padding>
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
       <Label layoutX="117.0" layoutY="412.0" prefHeight="25.0" prefWidth="157.0" text="Division" textFill="#f5f5f5">
          <font>
             <Font name="Britannic Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="divisiontextfield" layoutX="121.0" layoutY="448.0" prefHeight="3.0" prefWidth="157.0" style="-fx-background-radius: 5;">
+      <TextField fx:id="divisiontextfield" layoutX="121.0" layoutY="448.0" prefHeight="21.0" prefWidth="175.0" style="-fx-background-radius: 5;">
          <padding>
             <Insets left="7.0" />
          </padding></TextField>
