@@ -27,6 +27,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
+import static com.example.admission_help.universityInfo.daysleft.*;
+
 public class timecontroller implements Initializable {
 
     @FXML
@@ -37,6 +39,8 @@ public class timecontroller implements Initializable {
     private TableColumn<time,String> uname;
     @FXML
     private TableColumn<time,String> date;
+    @FXML
+    private TableColumn<time,String> leftday;
     @FXML
     private ImageView studentimageview;
     @FXML
@@ -99,6 +103,7 @@ public class timecontroller implements Initializable {
         id.setCellValueFactory(new PropertyValueFactory<time,Integer>("id"));
         uname.setCellValueFactory(new PropertyValueFactory<time,String>("uname"));
         date.setCellValueFactory(new PropertyValueFactory<time,String>("edate"));
+        leftday.setCellValueFactory(new PropertyValueFactory<time,String>("dayleft"));
 
 
 
@@ -115,13 +120,15 @@ public class timecontroller implements Initializable {
             Statement statement = connectdb.createStatement();
             ResultSet resultSet = statement.executeQuery("select * from uni_time");
             while (resultSet.next()) {
-                time.add(new time(resultSet.getInt("idtime"), resultSet.getString("uniname"), resultSet.getString("time")));
+                time.add(new time(resultSet.getInt("idtime"), resultSet.getString("uniname"), resultSet.getString("time"),resultSet.getString("dayleft")));
+                //leftday.Text=dayleft(resultSet.getString("time"));
             }
 
 
         } catch (SQLException e) {
             System.err.println("Cannot Connect to Database");
         }
+
 
 
 
@@ -199,6 +206,17 @@ public class timecontroller implements Initializable {
     @FXML
     public void about(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("about.fxml"));
+
+        Node node = (Node) event.getSource();
+
+        Stage stage = (Stage) node.getScene().getWindow();
+
+        stage.setScene(new Scene(root));
+
+    }
+    @FXML
+    public void logout(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
 
         Node node = (Node) event.getSource();
 

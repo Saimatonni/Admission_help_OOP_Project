@@ -10,7 +10,7 @@ import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 //import utilities.sqliteConnection;
-import java.io.IOException;
+import java.io.*;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -55,14 +55,25 @@ public class uniController {
         String insertFields = "INSERT INTO login.university_list (uni_name, unit, hsc_gpa, hsc_steam, ssc_gpa,ssc_steam) VALUES ('";
         String insertValues = uname + "','" + Unit + "','" + hscgpa + "','" + hscsteam +  "','" + sscgpa + "','" + sscsteam + "')";
         String insertToRegister = insertFields + insertValues;
+        String[] str = new String[10];
+        try {
+            FileWriter fw = new FileWriter("Read.txt");
+            BufferedWriter write = new BufferedWriter(fw);
+                System.out.println(sscgpa + " " + sscsteam + " " + hscgpa + " " + hscsteam + " " + uname + " " + Unit);
+                write.write(sscgpa + " " + sscsteam + " " + hscgpa + " " + hscsteam + " " + uname + " " + Unit);
+                write.newLine();
+                write.close();
+            try {
+                Statement statement = connectdb.createStatement();
+                statement.executeUpdate(insertToRegister);
+                meassage.setText("added successfully");
+                //createAccountFrom();
 
-        try{
-            Statement statement = connectdb.createStatement();
-            statement.executeUpdate(insertToRegister);
-            meassage.setText("added successfully");
-            //createAccountFrom();
-
-        }catch(Exception e){
+            } catch (Exception e) {
+                e.printStackTrace();
+                e.getCause();
+            }
+        }catch(IOException e){
             e.printStackTrace();
             e.getCause();
         }

@@ -25,6 +25,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
+import static com.example.admission_help.universityInfo.daysleft.dayleft;
+
 //import static javax.xml.catalog.CatalogMessages.resourceBundle;
 
 //import static com.sun.java.swing.action.ActionManager.utilities;
@@ -36,6 +38,7 @@ public class addtimecontroller implements Initializable {
     private TextField unametextfield;
     @FXML
     private TextField datetextfield;
+
     @FXML
     private TableView<time> tableView;
     @FXML
@@ -52,6 +55,7 @@ public class addtimecontroller implements Initializable {
         id.setCellValueFactory(new PropertyValueFactory<time,Integer>("id"));
         uname.setCellValueFactory(new PropertyValueFactory<time,String>("uname"));
         date.setCellValueFactory(new PropertyValueFactory<time,String>("edate"));
+
 
 
 
@@ -114,8 +118,9 @@ public class addtimecontroller implements Initializable {
         String uname = unametextfield.getText();
         String date = datetextfield.getText();
 
-        String insertFields = "INSERT INTO login.uni_time (uniname,time) VALUES ('";
-        String insertValues = uname + "','" + date + "')";
+        String insertFields = "INSERT INTO login.uni_time (uniname,time,dayleft) VALUES ('";
+        String leftday= dayleft(date);
+        String insertValues = uname + "','" + date + "','" + leftday +"')";
         String insertToRegister = insertFields + insertValues;
 
         try{

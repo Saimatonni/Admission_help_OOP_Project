@@ -113,7 +113,6 @@ public class eligibilityController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
         String[] str = new String[10];
         try {
             FileReader fr = new FileReader("Write.txt");
@@ -235,6 +234,28 @@ public class eligibilityController implements Initializable {
     @FXML
     public void time(MouseEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("time.fxml"));
+
+        Node node = (Node) event.getSource();
+
+        Stage stage = (Stage) node.getScene().getWindow();
+
+        stage.setScene(new Scene(root));
+
+    }
+    @FXML
+    public void about(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("about.fxml"));
+
+        Node node = (Node) event.getSource();
+
+        Stage stage = (Stage) node.getScene().getWindow();
+
+        stage.setScene(new Scene(root));
+
+    }
+    @FXML
+    public void logout(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
 
         Node node = (Node) event.getSource();
 

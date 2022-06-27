@@ -176,5 +176,17 @@ public class homeviewController implements Initializable {
 
     }
 
+    @FXML
+    public void logout(MouseEvent event) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+
+        Node node = (Node) event.getSource();
+
+        Stage stage = (Stage) node.getScene().getWindow();
+
+        stage.setScene(new Scene(root));
+
+    }
+
 
 }
