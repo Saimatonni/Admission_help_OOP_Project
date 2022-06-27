@@ -1,4 +1,4 @@
-package com.company;
+package com.example.admission_help.universityInfo;
 
 
 import java.text.SimpleDateFormat;
@@ -24,7 +24,7 @@ public class daysleft {
             leap = false;
         return leap;
     }
-    public static int day(String examdate) {
+    public static String dayleft(String examdate) {
         SimpleDateFormat formatDate = new SimpleDateFormat("dd/MM/yyyy  HH:mm:ss z");
         Date date = new Date();
         formatDate.setTimeZone(TimeZone.getTimeZone("IST"));
@@ -65,8 +65,6 @@ public class daysleft {
             }
         }
         //System.out.println(days);
-        return days;
-      }
+        return String.valueOf(days);
+    }
 }
-
-

@@ -5,15 +5,25 @@ public class time {
     Integer id;
     String uname;
     String edate;
+    String dayleft;
     public time(){
         uname=" ";
         edate=" ";
+        dayleft="";
 
+    }
+
+    public time(Integer id, String uname, String edate,String dayleft){
+        this.id = id;
+        this.uname =uname;
+        this.edate=edate;
+        this.dayleft=dayleft;
     }
     public time(Integer id, String uname, String edate){
         this.id = id;
         this.uname =uname;
         this.edate=edate;
+
     }
 
     public Integer getId() {
@@ -40,6 +50,13 @@ public class time {
         this.edate = edate;
     }
 
+    public String getDayleft() {
+        return dayleft;
+    }
+
+    public void setDayleft(String dayleft) {
+        this.dayleft = dayleft;
+    }
 
 
 
